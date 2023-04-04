@@ -1,0 +1,79 @@
+#//////////////////////////////////////////////////////////////////////////////
+# MAIA DRIVER OPTIONS:
+gridGenerator = false    # ACTIVATE GRID GENERATOR
+flowSolver = true       # AND SOLVERS
+
+#//////////////////////////////////////////////////////////////////////
+# PHYSICS:
+nDim = 2  # 2D PROBLEM
+timeSteps = 200      # #OF TIMESTEPS
+Re = 200              # REYNOLDS NUMBER
+Ma = 0.1             # MACH NUMBER
+gamma = 1.4          # RATIO OF SPECIFIC HEATS
+initialCondition = 114747 # INITIAL CONDITION
+shockLocation = 0.5
+leftRho = 1.0
+leftU = 0.0
+leftPressure = 1.0
+rightRho = 0.1
+rightU = 0.0
+rightPressure = 0.125
+#rightRho = 1.0
+#rightU = 0.75
+#rightPressure = 1.0
+
+#//////////////////////////////////////////////////////////////////////
+# NUMERICS:
+executionRecipe = "RECIPE_BASE"
+govEqs = "EULER"
+solvertype.default = "MAIA_UNIFIED"
+solvertype.0 = "MAIA_FINITE_VOLUME" # SOLVER TYPE: FINITE VOLUME
+upwindCoefficient = 0.5           # CHI (UPWIND OF PRESSURE SPLITTING)
+solverMethod = "MAIA_RUNGE_KUTTA" # TIME INTEGRATION METHOD: RUNGE KUTTA
+cfl = 0.2                       # COURANT NUMBER
+cellMerging = false                 # FLUX-REDISTRIBUTION ENABLED
+surfaceValueReconstruction = "HOCD_LIMITED_SLOPES"
+limitedSlopesVar =[1,1,1]
+
+#//////////////////////////////////////////////////////////////////////
+# INPUT/OUTPUT:
+outputDir = "./out/"               # ROOT DIR OF OUTPUT FILES
+solutionOutput = "./out/"          # ROOT DIR FOR SOLUTION OUTPUT
+gridInputFileName = "grid.Netcdf"         # GRID GENERATOR OUTPUT FILE
+geometryInputFileName = "geometry.toml" # GEOMETRY BINARY FILE
+solutionInterval = 10         # OUTPUT INTERVAL IN TIMESTEPS
+residualInterval = 1               # RESIDUAL INTERVAL
+
+#//////////////////////////////////////////////////////////////////////
+# BOUNDARY CONDITIONS:
+maxNoBndryCndIds = 4     # MAX #OF BOUNDARY CONDITIONS
+sigmaSponge = 0.0        # SPONGE FORCING TERM AMPLITUDE
+spongeLayerThickness = 20 # SPONGE THICKNESS LENGTH
+
+#//////////////////////////////////////////////////////////////////////
+# GRID GENERATION:
+maxRfnmntLvl = 11             # MAX ALLOWED REFINEMENT LEVEL
+# adaptation = true
+# sensorType = ["INTERFACE","VORTICITY"]
+# sensorWeight = [-1.0,1.0]
+# adaptationInterval = 100
+# allowInterfaceRefinement = true
+
+#//////////////////////////////////////////////////////////////////////
+# MEMORY ALLOCATION:
+maxNoCells = 400000     # MAX #OF CELLS ( ~9 * (2^{D})^{Level} )
+maxNoBndryCells = 40000 # MAX #OF BOUNDARY CELLS
+maxNoSurfaces = 500000  # MAX #OF SURFACES ( ~3 * maxNoCells )
+scratchSize = 4.0
+
+#//////////////////////////////////////////////////////////////////////
+noSolvers = 1
+noDomains = 1        # #of MPI Process (not necessary for Massive Parallel)
+restartTimeStep = 0
+restartFile = true
+restartInterval = 1000
+useNonSpecifiedRestartFile = true
+timeStepMethod = 1
+writeOutData = 0
+
+#//////////////////////////////////////////////////////////////////////////////

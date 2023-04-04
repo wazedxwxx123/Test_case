@@ -1,0 +1,120 @@
+#//////////////////////////////////////////////////////////////////////////////
+# MAIA DRIVER OPTIONS:
+gridGenerator = false    # ACTIVATE GRID GENERATOR
+flowSolver = true       # AND SOLVERS
+outputInitialCondition=true
+
+#//////////////////////////////////////////////////////////////////////
+# PHYSICS:
+nDim = 2  # 2D PROBLEM
+timeSteps = 300      # #OF TIMESTEPS
+finalTime = 0.3       # FINISH TIME
+Re = 200              # REYNOLDS NUMBER
+Ma = 0.1             # MACH NUMBER
+gamma = 1.4          # RATIO OF SPECIFIC HEATS
+initialCondition = 114747 # INITIAL CONDITION
+shockLocation = 0.5
+###########  The shocktube case ###########
+### Ref Eleuterio F.Toro "Riemann Solvers and Numerical Methods for Fluid Dynamics P225
+### Test 1.modified version of Sod Test
+### The solution consists of a right shock wave ,a right contact wave and left sonic rarefaction
+### This is very useful in assessing the entropy satisfaction property of numerical method
+leftRho = 1.0
+leftU = 0.0
+leftPressure = 1.0
+rightRho = 0.125
+rightU = 0.0
+rightPressure = 0.1
+#Looks well!
+
+### Test 2.The '123' problem
+### The solution consists of two symmetric rarefaction and trivial contact wave of zero spped
+### This is very useful in assessing the performance of low-density flows
+#leftRho = 1.0
+#leftU = -2.0
+#leftPressure = 0.4
+#rightRho = 1.0
+#rightU = 2.0
+#rightPressure = 0.4
+#Looks well in center rigion of x-axis, but the BC need others modified
+#the velocity in the center looks wrong
+
+### Test 3. Serve test problem
+### The solution consists of left rarefaction, a contact and a right shock
+#leftRho = 1.0
+#leftU = 0.0
+#leftPressure = 1000
+#rightRho = 1.0
+#rightU = 0.0
+#rightPressure = 0.1
+#Looks well! 
+
+### Test4.Right and left chock emerging
+### The solution consists of a left facing shock, a right travlling contact discontinuity, a right travelling shock wave
+#leftRho = 5.9924
+#leftU = 19.5975
+#leftPressure = 460.894
+#rightRho = 5.99242
+#rightU = -6.19633
+#rightPressure = 46.0950
+#Wrong and diverge! but probably cause by wrong BC-setting.
+
+#//////////////////////////////////////////////////////////////////////
+# NUMERICS:
+executionRecipe = "RECIPE_BASE"
+govEqs = "EULER"
+solvertype.default = "MAIA_UNIFIED"
+solvertype.0 = "MAIA_FINITE_VOLUME" # SOLVER TYPE: FINITE VOLUME
+upwindCoefficient = 0.0           # CHI (UPWIND OF PRESSURE SPLITTING)
+solverMethod = "MAIA_RUNGE_KUTTA" # TIME INTEGRATION METHOD: RUNGE KUTTA
+cfl = 0.2                       # COURANT NUMBER
+cellMerging = true                 # FLUX-REDISTRIBUTION ENABLED
+surfaceValueReconstruction = "HOCD_LIMITED_SLOPES"
+limitedSlopesVar =[1,1,1]
+
+
+#//////////////////////////////////////////////////////////////////////
+# INPUT/OUTPUT:
+outputDir = "./out/"               # ROOT DIR OF OUTPUT FILES
+solutionOutput = "./out/"          # ROOT DIR FOR SOLUTION OUTPUT
+gridInputFileName = "grid.Netcdf"         # GRID GENERATOR OUTPUT FILE
+geometryInputFileName = "geometry.toml" # GEOMETRY BINARY FILE
+residualInterval = 1
+solutionInterval = 10           # OUTPUT INTERVAL IN TIMESTEPS
+qCriterionOutput = false
+#writeCutCellsToGridFile = true
+
+#//////////////////////////////////////////////////////////////////////
+# BOUNDARY CONDITIONS:
+maxNoBndryCndIds = 4     # MAX #OF BOUNDARY CONDITIONS
+sigmaSponge = 0.0        # SPONGE FORCING TERM AMPLITUDE
+spongeLayerThickness = 4 # SPONGE THICKNESS LENGTH
+
+#//////////////////////////////////////////////////////////////////////
+# GRID GENERATION:
+maxRfnmntLvl = 9             # MAX ALLOWED REFINEMENT LEVEL
+adaptation = false
+sensorType = ["DERIVATIVE"]
+sensorWeight = [-0.2]
+sensorDerivativeVariables = 0
+adaptationInterval = 10
+#allowInterfaceRefinement = true
+
+#//////////////////////////////////////////////////////////////////////
+# MEMORY ALLOCATION:
+maxNoCells = 400000     # MAX #OF CELLS ( ~9 * (2^{D})^{Level} )
+maxNoBndryCells = 400000 # MAX #OF BOUNDARY CELLS
+maxNoSurfaces = 500000  # MAX #OF SURFACES ( ~3 * maxNoCells )
+scratchSize = 14.0
+
+#//////////////////////////////////////////////////////////////////////
+noSolvers = 1
+noDomains = 12        # #of MPI Process (not necessary for Massive Parallel)
+restartTimeStep = 0
+restartFile = false
+restartInterval = 10
+useNonSpecifiedRestartFile = false
+timeStepMethod = 1
+writeOutData = 0
+
+#//////////////////////////////////////////////////////////////////////////////

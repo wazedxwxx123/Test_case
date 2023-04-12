@@ -1,0 +1,65 @@
+solid ascii
+ facet normal 0 0 0
+  outer loop
+   vertex 0.5 4.5 0.5
+   vertex 15 4.5 15
+   vertex 0.5 4.5 -0.5
+  endloop
+ endfacet
+
+ facet normal 0 0 0
+  outer loop
+   vertex 0.5 4.5 0.5
+   vertex 15 4.5 15
+   vertex -0.5 4.5 0.5
+  endloop
+ endfacet
+
+ facet normal 0 0 0
+  outer loop
+   vertex 15 4.5 15
+   vertex -15 4.5 15
+   vertex -0.5 4.5 0.5
+  endloop
+ endfacet
+
+ facet normal 0 0 0
+  outer loop
+   vertex -15 4.5 15
+   vertex -0.5 4.5 0.5
+   vertex -15 4.5 -15
+  endloop
+ endfacet
+
+ facet normal 0 0 0
+  outer loop
+   vertex -15 4.5 -15
+   vertex -0.5 4.5 -0.5
+   vertex -0.5 4.5 0.5
+  endloop
+ endfacet
+
+ facet normal 0 0 0
+  outer loop
+   vertex -15 4.5 -15
+   vertex -0.5 4.5 -0.5
+   vertex 15 4.5 -15
+  endloop
+ endfacet
+
+ facet normal 0 0 0
+  outer loop
+   vertex 15 4.5 -15
+   vertex 0.5 4.5 -0.5
+   vertex -0.5 4.5 -0.5
+  endloop
+ endfacet
+
+ facet normal 0 0 0
+  outer loop
+   vertex 15 4.5 -15
+   vertex 0.5 4.5 -0.5
+   vertex 15 4.5 15
+  endloop
+ endfacet
+endsolid

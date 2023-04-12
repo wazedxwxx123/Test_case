@@ -1,0 +1,25 @@
+#//////////////////////////////////////////////////////////////////////////////
+
+ noSegments = 4  # FIVE SEGMENTS: 4 BOUNDARY SEGMENTS + 1 CYLINDER SEGMENT
+
+ filename = "stl/cylinder"  # ROOT SEGMENT NAMES
+ "body_segments.boundary" = [0, 1, 2, 3] # BOUNDARY SEGMENTS: stl/cylinder.0 ... stl/cylinder.3
+ # "body_segments.circle" = 4  # CYLINDER SEGMENT: stl/cylinder.4
+
+ #BC = 0
+
+#                       1 (SPONGE)
+#             _______________________________
+#             |                              |
+# ------> u   |                              |
+# (INFLOW) 0  |      O  4 (SOLID-WALL)       | 2 (OUTFLOW)
+#             |                              |
+#             |______________________________|
+#                       3 (SPONGE)
+
+ BC.0 = 1261  # INFLOW     BNDRY CONDITION FOR SEGMENT 0
+ BC.1 = 3002 #1012  # SPONGE     BNDRY CONDITION FOR SEGMENT 1
+ BC.2 = 109900  # OUTFLOW    BNDRY CONDITION FOR SEGMENT 2
+ BC.3 = 3002 #1012  # SPONGE     BNDRY CONDITION FOR SEGMENT 3
+ # BC.4 = 3003  # SOLID WALL BNDRY CONDITION FOR SEGMENT 4 (CYLINDER)
+#//////////////////////////////////////////////////////////////////////////////

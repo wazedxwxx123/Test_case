@@ -1,0 +1,51 @@
+#************************************************************
+#****************--GENERAL--*********************************
+ gridGenerator = true
+ scratchSize = 3.9
+ #writeDomainsVTK = 1 ;
+ partitionCellOffspringThreshold = 20000
+ flowSolver = false
+ noDomains = 1
+ outputDir = "out/"
+
+#***********************************************************
+#**************--CUTOFF--***********************************
+ cutOff = 1
+ cutOffMethod = "B"
+ cutOffCoordinates = [-2.0, 3.0, -2.0, 2.0, 6.0, 2.0]
+ weightMethod = 0
+
+#***********************************************************
+#***********************************************************
+ gridOutputFileName = "grid.Netcdf"
+ #outputFormat = "VTK" ;
+
+#**********************************************************
+#****************--ADAPTATION--****************************
+#***********************************************************
+#***********************************************************
+ nDim = 3
+ dualTimeStepping = false
+
+#******************************************************
+#************--REFINEMENT--****************************
+ localRfnMethod = 1
+ localRfnLvlMethods = "B"
+ localRfnLevelProperties = [-1.5, -1.0, -7.0, 1.5, 15.0, 7.0]
+ minLevel = 8
+ maxNoCells = 90000000
+ maxUniformRefinementLevel.0 = 9
+ maxUniformRefinementLevel.1 = 8
+ maxBoundaryRfnLvl.0 = 9
+ maxBoundaryRfnLvl.1 = 8
+ maxRfnmntLvl.0 = 9
+ maxRfnmntLvl.1 = 8
+ reductionFactor = 1.0
+
+#****************************************************
+#****************************************************
+ geometryInputFileName = "geometry.toml"
+
+
+multiSolverGrid=true
+noSolvers=2

@@ -1,0 +1,229 @@
+initialAdaptation.default = true
+ solvertype.default= "MAIA_UNIFIED"
+ executionRecipe = "RECIPE_INTRASTEP"
+ solvertype.0 = "MAIA_FINITE_VOLUME"
+ solvertype.1 = "MAIA_LEVELSET_SOLVER"
+
+ solverOrder_0 = [0,1]
+ solverOrder_1 = [1,0]
+
+ couplerOrder_0 = [1,1]
+
+ adaptationOrder = [0,1]
+
+ recipeMaxNoSteps = 2 # necessary ? length of some array ?
+ couplerType_0 = "COUPLER_LS_FV_COMBUSTION"
+ solversToCouple_0 = [1,0]
+ noCouplers = 1
+
+ solverMethod.default                     = "MAIA_RUNGE_KUTTA_GEQU_PV"
+# solverMethod.1                   = "MAIA_LATTICE_BGK"          #siehe Testcases LB
+# solverMethod.0                   = "MAIA_SEMI_LAGRANGE_LEVELSET_LB"
+
+lsSolver.default=true
+combustion.default=true
+levelSet.default=true
+
+
+omp_num_threads = 1
+ cutOffDirections = [2, 0, 1, 4, 5, 3]
+ cutOffBndryIds = [1602, 29050, 29051, 16014, 16015, 1765]
+# random modes
+ noOfRandomModes = 400
+ bc1601Lb = 0.2
+ bc1601CommValues = true
+ uuref = 2.9328e-5
+ vvref = 8.1080e-5
+ wwref = 2.9328e-5
+ uvref = 0.0
+ uwref = 0.0
+ vwref = 0.0
+
+#=========== SCRATCH ======================================================
+ scratchSize = 20.00
+
+#============ MULTISOLVER =================================================
+ cellMerging = false
+ noHaloLayers = 5
+ noGHaloLayers = 5
+ noDomains = 12
+
+#============ STARTUP SETTINGS GRID GENERATION/FLOW SOLVER RUN ============
+ gridGenerator = false
+ partitionCellOffspringThreshold = 50000
+ flowSolver = true
+ restartFile = true
+ restartTimeStep = 4
+ useNonSpecifiedRestartFile = false
+
+#============ GRID GENERATION =============================================
+ maxRfnmntLvl = 9
+ createBoundaryAtCutoff = true
+
+#============ SOLVER TYPE ===============================================
+ noRKSteps = 5
+ rkalpha-step = [0.25, 0.16666666666, 0.375, 0.5, 1.0]
+ rungeKuttaOrder = 2
+ noSpecies = 1
+
+#============ NUMERICAL SETTINGS FV ====================================
+ cfl = 0.5
+ timeStepMethod = 1
+ globalUpwindCoefficient = 0.01
+ upwindCoefficient = 0.5
+ dualTimeStepping = false
+
+#============ LEVEL-SET SOLVER ========================================
+ gRKMethod = 1
+ nogRKSteps = 3
+ grkalpha-step = [1.0, 0.25, 0.6666666666666666]
+ levelSetDiscretizationScheme = "UC5"
+ reinitMethod = "HCR2_FULLREINIT"
+
+#============ NUMERICAL SETTINGS LEVEL SET ============================
+ gBandWidth = 20
+ gShadowWidth = 30
+ gInnerBound = 5
+ computeExtVel = 700
+# guarantees interpolation of flow velocity to small level set cells -> guarantees pocket generation
+ interpolateFlowFieldToFlameFront = false
+ smoothExtVel = true
+ extVelIterations = 200
+ extVelConvergence =  0.0004
+ extVelCFL = 0.35
+ minReinitializationSteps = 11
+ gReinitIterations = 200
+ guaranteeReinit = true
+ reinitConvergence = 1.4 #0.39234919077979401667 ;
+ reinitThreshold = 0.0006
+ reinitThresholdAvg = 0.009
+ omegaReinit = 1.0
+ reinitCFL = 0.25
+ relaxationFactor = 0.5
+ reinitInterval = 1
+ hyperbolicCurvature = false
+ highOrderDeltaFunction = false
+ useCorrectedBurningVelocity = false
+# filterFlameTubeEdges = false ;
+# filterFlameTubeEdgesDistance = 0.4 ;
+
+#============ NUMERICAL SETTINGS COMBUSTION MODEL =======================
+ subfilterVariance = 2.0
+ totalDamp = true
+ curvatureDamp = true
+ curvatureDampFactor = 3.0
+ sharpDamp = false
+ dampingDistanceFlameBase = 0.04118806
+# equals 2.7*9.765625e-3 (from neutral markstein length computation)
+ noReactionCells = 0.026367201
+ c0 = 0.5
+
+#============ OUTPUT INTERVALS/SETTINGS ================================
+ timeSteps = 10
+ solutionInterval = 10
+ levelSetSolutionInterval = 1000000
+ residualInterval = 1
+ dragOutputInterval = 1000000
+ restartInterval = 40
+ outputFormat = "NETCDF"
+ maxIterations = 1
+ recordPressure = false
+ structuredFlameOutput = true
+ structuredFlameOutputLevel = 5
+ samplesPerCycle = 50
+ samplingStartIteration = 190000
+ noSamplingCycles = 2
+ writeLevelSetData = false
+ outputOffset = 0
+ writeLineData = false
+ recordFlameFrontPosition = true
+
+#============ DATA SETTINGS ===========================================
+ outputDir = "./out/"
+ geometryInputFileName = "geometry.toml"
+ "zone_solvers.first" = 0
+ solutionOutput = "./out/"
+
+#============ TESTCASE SETTINGS =======================================
+ nDim = 3
+ initialCondition = 1751600
+ Re = 7000
+ Ma = 0.0984  #3*0.0328 ;
+ Pr = 0.72
+ gamma = 1.4
+ angle = [90, 0]
+ plenum = false
+ burntUnburntTemperatureRatio = 2
+ jet = true
+ jetForcing = false
+ jetHalfLength = 0.5
+ shearLayerStrength = 25.0
+ shearLayerThickness = 10.0 #20.5;
+# deltaYtemperatureProfile= 0.02078124 ;
+# thermalProfileStartFactor= -9999.9 ;
+ flameRadiusOffset = 0.00
+ referenceTemperature = 300
+ realRadiusFlameTube = 0.515
+ radiusFlameTube = 0.54
+ radiusVelFlameTube = 0.509
+ xOffsetFlameTube = 0.0
+ yOffsetFlameTube = 4.5
+ # markstein length chosen from R2_7/Re..P/pert008T7L1 (th: 0.13694181)
+ marksteinLength = 0.02
+ marksteinLengthPercentage = 1.0
+ steadyFlameLength = 3.94859392400230158060
+ flameSpeed = 0.002175  #0.00857 ;
+ massFlux = false
+ laminarFlameThickness = 0.01952
+ levelSetBC = "SYMMETRIC"
+ levelSetBoundaryCondition = 1751600
+ levelSetTestCase = 1751600
+ forcing = true
+ Strouhal = -1
+# strouhal number based on length ~one (get the strouhl numbers from the DL instability computations)
+ neutralFlameStrouhal =  3.1232921  #  6.186520912
+ forcingAmplitude = 0.1
+
+#============ SPONGE DOMAIN BOUNDARY LAYER ======================================
+ spongeLayerThickness = 1.0
+ spongeLayerType = 91900
+ sigmaSponge = 15.0
+ spongeFactor = [0.5, 0.5, 2.0, 1.0, 0.5, 0.5]
+
+#============ SPONGE BOUNDARY LAYER ======================================
+# createSpongeBoundary = true ;
+# spongeLayerLayout = 0 ;
+# spongeLayerType = 17515 ;
+# noMaxSpongeBndryCells = 760000 ;
+# spongeLayerThickness = 1.0 ;
+# spongeBndryCndIds = 1765, 29050, 29051, 16014, 16015;
+# spongeDirections = "POSITIVE_YWALL", "NEGATIVE_XWALL", "POSITIVE_XWALL", "NEGATIVE_ZWALL", "POSITIVE_ZWALL" ;
+# spongeFactor = 5.0, 2.0, 2.0, 2.0;
+# sigmaSponge = 5.0 , 5.0 , 5.0 , 5.0;
+# spongeReductionFactor = 1.0;
+
+#============ MISC SETTINGS ===============================================
+ noSolvers = 2
+ volumeLimitWall = 0.0
+ volumeLimitOther = 0.0
+
+#============ ADAPTATION =================================================
+ noAdaptationSteps = 0
+ convergenceCriterion = 1e-12
+ timeStepConvergenceCriterion = 1e-6
+
+#============ COLLECTOR SIZES ===========================================
+ maxNoBndryCndIds = 10
+ maxNoCells = 160000
+ maxNoBndryCells = 50000
+ maxNoSurfaces = 500000
+
+
+multiSolverGrid=true
+adaptation=true
+sensorType = ["INTERFACE"]
+sensorWeight = [-1]
+adaptationInterval=-1
+solverAdapts.0=false
+solverAdapts.1=true
+allowInterfaceRefinement=true

@@ -7,7 +7,7 @@ outputInitialCondition=true
 #//////////////////////////////////////////////////////////////////////
 # PHYSICS:
 nDim = 2  # 2D PROBLEM
-timeSteps = 14000      # #OF TIMESTEPS
+timeSteps = 24000      # OF TIMESTEPS
 finalTime = 0.3       # FINISH TIME
 Re = 10              # REYNOLDS NUMBER
 Ma = 0.001             # MACH NUMBER
@@ -17,7 +17,7 @@ shockLocation = 0.1
 intialRho = 1.0
 intialU = 0.0
 intialPressure = 0.71429
-shockMach = 2.0
+shockMach = 4.5
 
 #//////////////////////////////////////////////////////////////////////
 # NUMERICS:
@@ -39,7 +39,7 @@ outputDir = "./out/"               # ROOT DIR OF OUTPUT FILES
 solutionOutput = "./out/"          # ROOT DIR FOR SOLUTION OUTPUT
 gridInputFileName = "grid.Netcdf"         # GRID GENERATOR OUTPUT FILE
 geometryInputFileName = "geometry.toml" # GEOMETRY BINARY FILE
-residualInterval = 2
+residualInterval = 10
 solutionInterval = 100           # OUTPUT INTERVAL IN TIMESTEPS
 qCriterionOutput = false
 #writeCutCellsToGridFile = true
@@ -52,26 +52,27 @@ spongeLayerThickness = 5 # SPONGE THICKNESS LENGTH
 
 #//////////////////////////////////////////////////////////////////////
 # GRID GENERATION:
-maxRfnmntLvl = 10             # MAX ALLOWED REFINEMENT LEVEL
-adaptation = true
-initialAdaptation = false
-sensorType = ["INTERFACE", "DERIVATIVE"]
-sensorWeight =[-1.0, 1.0]
-sensorDerivativeVariables = 2
+maxRfnmntLvl = 12             # MAX ALLOWED REFINEMENT LEVEL
+adaptation = false
+sensorType = ["INTERFACE", "DERIVATIVE", "SMOOTH"]
+sensorWeight =[1.0, 0.1, 1.0]
+adaptationInterval = 2
 coarseRatio = 0.2
+#saveSensorData = true
+#adaptationStart = 800
+initialAdaptation = true
 #addedAdaptationSteps = 1
 #checkRefinementHoles = true
-#sensorDerivativeVariables = 0
-smoothingLayers = 20
-adaptationInterval = 2
+sensorDerivativeVariables = 7
+smoothingLayers = 5
 #allowInterfaceRefinement = true
 
 #//////////////////////////////////////////////////////////////////////
 # MEMORY ALLOCATION:
-maxNoCells = 50000     # MAX #OF CELLS ( ~9 * (2^{D})^{Level} )
-maxNoBndryCells = 50000 # MAX #OF BOUNDARY CELLS
-maxNoSurfaces = 50000  # MAX #OF SURFACES ( ~3 * maxNoCells )
-scratchSize = 20.0
+maxNoCells = 80000     # MAX #OF CELLS ( ~9 * (2^{D})^{Level} )
+maxNoBndryCells = 80000 # MAX #OF BOUNDARY CELLS
+maxNoSurfaces = 80000  # MAX #OF SURFACES ( ~3 * maxNoCells )
+scratchSize = 30.0
 
 #//////////////////////////////////////////////////////////////////////
 noSolvers = 1

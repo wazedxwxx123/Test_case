@@ -1,0 +1,6 @@
+{
+    "testcase": {
+        "maxdiff": 10,
+	"significant_digits_time": 6
+    }
+}

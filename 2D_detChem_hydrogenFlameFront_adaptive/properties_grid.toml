@@ -1,0 +1,45 @@
+#//////////////////////////////////////////////////////////////////////////////
+# MAIA DRIVER OPTIONS:
+gridGenerator = true
+flowSolver = false       # AND SOLVERS
+
+#//////////////////////////////////////////////////////////////////////
+# PHYSICS:
+nDim = 2  # 2D PROBLEM
+
+#//////////////////////////////////////////////////////////////////////
+# INPUT/OUTPUT:
+outputDir = "./out/"               # ROOT DIR OF OUTPUT FILES
+gridOutputFileName = "grid.Netcdf"        # GRID INPUT FILE FOR SOLVER
+geometryInputFileName = "geometry.toml" # GEOMETRY BINARY FILE
+
+createBoundaryAtCutoff = true
+cutOff = 1
+cutOffMethod = "B"
+cutOffCoordinates = [-0.015, -1.0, 0.045, 1.0]
+
+#//////////////////////////////////////////////////////////////////////
+# GRID GENERATION:
+minLevel = 10  # MIN REFINEMENT LEVEL (CELLS ABOVE THIS LEVEL DELETED)
+maxRfnmntLvl = 13             # MAX ALLOWED REFINEMENT LEVEL
+maxUniformRefinementLevel = 11 # INITIAL REFINEMENT LEVEL
+maxBoundaryRfnLvl = 11 # REFINEMENT LEVEL AT BNDRY CND
+localRfnMethod           = 0
+localRfnLvlMethods       = "B-B" #"B-B-B-B"
+
+localRfnLevelProperties  = [-0.1, -0.57945,      0.1,       0.57945,
+-0.09,     -0.57945,     0.09,       0.57945]#,
+#-0.0144863,     -0.0289725,     0.181078,       0.0289725,
+#-0.0108647,     -0.0144863,     0.0724313,      0.0144863]
+
+#localRfnLevelProperties  = [-2.5,  -4.0, 17.5,  4.0,
+#                           -1.5,  -3.0, 15.0,  3.0,
+#                           -1.0,  -2.0, 12.5,  2.0,
+#                           -0.75, -1.0,  5.0, 1.0]
+
+#//////////////////////////////////////////////////////////////////////
+# MEMORY ALLOCATION:
+maxNoCells = 19800000     # MAX #OF CELLS ( ~9 * (2^{D})^{Level} )
+scratchSize = 5
+#//////////////////////////////////////////////////////////////////////
+noDomains = 1        # #of MPI Process (not necessary for Massive Parallel)

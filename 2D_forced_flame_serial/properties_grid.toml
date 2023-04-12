@@ -1,0 +1,39 @@
+#=========== SCRATCH ======================================================
+ scratchSize = 13.00
+
+#============ MULTISOLVER =================================================
+ noDomains = 1
+ multiSolverGrid=true
+ noSolvers=2
+
+#============ STARTUP SETTINGS GRID GENERATION/FLOW SOLVER RUN ============
+ gridGenerator = true
+ flowSolver = false
+
+#============ GRID GENERATION =============================================
+ minLevel = 7
+ maxUniformRefinementLevel.0 = 10
+ maxBoundaryRfnLvl.0 = 10
+ maxRfnmntLvl.0 = 10
+ maxUniformRefinementLevel.1 = 7
+ maxBoundaryRfnLvl.1 = 7
+ maxRfnmntLvl.1 = 7
+
+ reductionFactor = 1.0
+ cutOff = 1
+ cutOffMethod = "B"
+ cutOffCoordinates = [-2.5, -1.0, 2.5, 6.5]
+
+#============ NUMERICAL SETTINGS FV ====================================
+ dualTimeStepping = false
+
+#============ DATA SETTINGS ===========================================
+ outputDir = "./out/"
+ gridOutputFileName = "grid.Netcdf"
+ geometryInputFileName = "geometry.toml"
+
+#============ TESTCASE SETTINGS =======================================
+ nDim = 2
+
+#============ COLLECTOR SIZES ===========================================
+ maxNoCells = 460000

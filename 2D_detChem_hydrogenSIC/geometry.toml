@@ -1,0 +1,38 @@
+#//////////////////////////////////////////////////////////////////////////////
+
+ noSegments = 5  # FIVE SEGMENTS: 4 BOUNDARY SEGMENTS + 1 CYLINDER SEGMENT
+
+ filename.default   = ""   # ROOT SEGMENT NAMES IF ASSIGNED OTHERWISE USE BLANK (opt. use stl/)
+ BC.default         = 0    # INITIALISATION OF BC
+
+ filename.0 = "stl/left.stl"
+ filename.1 = "stl/upper.stl"
+ filename.2 = "stl/right.stl"
+ filename.3 = "stl/lower.stl"
+ filename.4 = "stl/sphere.stl"
+
+#                       1 (OUTFLOW)
+#             ____________________
+#             |                  |2 (OUTFLOW)
+#             |                  |
+#             |                 /|
+#             |                / |
+#             | 4(SOLID)      /  |
+#             |              /   |
+#             |             /    |
+#             |            /     |
+#             |           /      |
+#             |          /       |
+#             |         /        |
+# (INFLOW) 0  |        /         |
+#             |       /          |
+#             |______/___________|
+#             3 (OUTFLOW)
+"body_segments.boundary" = [0,1,2,3]
+"body_segments.ramp" = [4]
+
+ BC.0 = 1048     # supersonic inflow  BNDRY CONDITION FOR SEGMENT 0
+ BC.1 = 3002  # adiabatic fixed wall conditions   BNDRY CONDITION FOR SEGMENT 1
+ BC.2 = 3002  # adiabatic fixed wall conditions   BNDRY CONDITION FOR SEGMENT 2
+ BC.3 = 3002  # adiabatic fixed wall conditions   BNDRY CONDITION FOR SEGMENT 3
+ BC.4 = 3003  # solid wall                        BNDRY CONDITION FOR SEGMENT 4

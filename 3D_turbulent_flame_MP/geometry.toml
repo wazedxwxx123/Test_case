@@ -1,0 +1,30 @@
+noSegments = 11
+
+ #filename = ""
+ filename.0 = "stl/inflow.stl"
+ filename.1 = "stl/negXWallInflow.stl"
+ filename.2 = "stl/posXWallInflow.stl"
+ filename.3 = "stl/negZWallInflow.stl"
+ filename.4 = "stl/posZWallInflow.stl"
+ filename.5 = "stl/negXWallBurnt.stl"
+ filename.6 = "stl/posXWallBurnt.stl"
+ filename.7 = "stl/negZWallBurnt.stl"
+ filename.8 = "stl/posZWallBurnt.stl"
+ filename.9 = "stl/outflow.stl"
+ filename.10 = "stl/dumpPlane.stl"
+
+ "body_segments.boundary" = [0,1,2,3,4,5,6,7,8,9,10]
+
+ #BC = 0
+
+ BC.0 = 1602
+ BC.1 = 3600
+ BC.2 = 3600
+ BC.3 = 3600
+ BC.4 = 3600
+ BC.5 = 29050
+ BC.6 = 29051
+ BC.7 = 16014
+ BC.8 = 16015
+ BC.9 = 1765
+ BC.10 = 3600 #2907 ;

@@ -2,15 +2,16 @@
 # MAIA DRIVER OPTIONS:
 gridGenerator = false    # ACTIVATE GRID GENERATOR
 flowSolver = true       # AND SOLVERS
+outputInitialCondition = true
 
 #//////////////////////////////////////////////////////////////////////
 # PHYSICS:
 nDim = 2  # 2D PROBLEM
-timeSteps = 10000      # #OF TIMESTEPS
+timeSteps = 20000      # #OF TIMESTEPS
 Re = 80              # REYNOLDS NUMBER
 Ma = 0.2             # MACH NUMBER
 gamma = 1.4          # RATIO OF SPECIFIC HEATS
-initialCondition = 11212 # INITIAL CONDITION
+initialCondition = 147520 # INITIAL CONDITION
 
 #//////////////////////////////////////////////////////////////////////
 # NUMERICS:
@@ -22,73 +23,64 @@ solverMethod = "MAIA_RUNGE_KUTTA" # TIME INTEGRATION METHOD: RUNGE KUTTA
 cfl = 0.4                       # COURANT NUMBER
 cellMerging = false                 # FLUX-REDISTRIBUTION ENABLED
 timeStepComputationInterval = 1
+surfaceValueReconstruction = "HOCD_LIMITED_SLOPES"
+limitedSlopesVar =[1,1,1]
 fvSystemEquations = "FV_SYSEQN_DETCHEM"
 #haloMode = 1
 #=========== DETAILED CHEMISTRY  ==========================================
 isDetChem = true
 hasChemicalReaction = true
-reactionMechanism = "ohn.yaml"
-phaseName = "gas"
+reactionMechanism = "h2o2.yaml"
+phaseName = "ohmech"
 transportModel = "Multi"
 
-noSpecies = 18
+noSpecies = 10
 #viscousFluxScheme = "FIVE_POINT_MULTISPECIES"
 viscousFluxScheme = "FIVE_POINT"
 
 #detailedChemInfTemp = 300
 #detailedChemInfDensity =  1.18
 #detailedChemInfVel = 0.345
-infTemperature = 291.0 #291 #250.0
-infVelocity = 3.169690384536243
-infPressure = 100000 # 100000 #125000
+infTemperature = 293.0 #291 #250.0
+infVelocity = 1808  # m/s?
+infPressure = 42663 # 100000 #125000
 infSpeciesName = ["H2", "N2", "O2"]
-infSpeciesMassFraction = [ 0.01730349309146262, 0.7538092820013447, 0.2288872249071927 ]
-
-laminarFlameSpeedFactor = 1.0 
-#//////////////////////////////////////////////////////////////////////
-#CUT-OFF
-cutOff = 1
-cutOffMethod = "B"
-cutOffCoordinates = [-0.015, -1.0, 0.045, 1.0]
-
-cutOffcbc = true
-
-createBoundaryAtCutoff = true
-
-cutOffDirections = [0, 1]
-cutOffBndryIds = [1261, 109900]
-cbcRelaxation = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0,
-100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0]
-
-bc1251ForcingAmplitude = 0.0
-bc1251ForcingWavelength = 0.08
-bc1251ForcingDirection = 0
+infSpeciesMassFraction = [0.028312570781427, 0.745186862967157, 0.226500566251416 ]
 
 #//////////////////////////////////////////////////////////////////////////////
 # LOAD BALANCING
 
 balance = true # activate load balancing
 loadBalancingMode = 0 # use weighting mode
-#testDynamicLoadBalancing = true # for testcases
 loadBalancingInterval = 10
 forceLoadBalancing = true
 
-weightFvBndryCells = true
-weightFvCutOffCells = false
-weightFvBc1601 = false
 #=========== ADAPTATION ===================
-maxRfnmntLvl = 13            # MAX ALLOWED REFINEMENT LEVEL
-adaptation = false
+maxRfnmntLvl = 11            # MAX ALLOWED REFINEMENT LEVEL
+adaptation = true
 adaptationInterval = 2
-sensorWeight = [1.0, -1.0]
-sensorType = ["DERIVATIVE", "BAND"]
-sensorDerivativeVariables = [4]
-allowInterfaceRefinement = true
-initialAdaptation = false
-mbBandWidth = [10, 10]
-smoothingLayers = 10
-addedAdaptationSteps = 2
-checkRefinementHoles = true
+sensorWeight = [-1.0, 0.25, 0.25]
+sensorType = ["PATCH","DERIVATIVE","DERIVATIVE"]
+#sensorType = ["INTERFACE","DERIVATIVE"]
+localRfnLvlMethods = "RB-RB-R"
+localRfnLevelProperties = [0.012, 0.00, 0.00775,
+                           -0.10,  -0.10, 0.0046, 0.0002,
+                           0.012, 0.00, 0.00765,
+                           -0.10,  -0.10, 0.0046, 0.0001,
+                           0.012, 0.00, 0.00755]
+#localRfnLvlMethods = "R-R-R"
+#localRfnLevelProperties = [0.012, 0.00, 0.00775,
+#                           0.012, 0.00, 0.00765,
+#                           0.012, 0.00, 0.00755]
+
+sensorDerivativeVariables = [3,9]
+#allowInterfaceRefinement = true
+initialAdaptation = true
+adaptationStart = 0
+#imbBandWidth = [10, 10]
+#smoothingLayers = 5
+#addedAdaptationSteps = 2
+#checkRefinementHoles = true
 #=========== DETAILED CHEMISTRY  ONE DIMENSIONAL SOLVER ===================
 gridRatio = 5.0
 gridSlope = 0.5 # 0.4
@@ -112,7 +104,7 @@ outputDir = "./out/"               # ROOT DIR OF OUTPUT FILES
 solutionOutput = "./out/"          # ROOT DIR FOR SOLUTION OUTPUT
 gridInputFileName = "grid.Netcdf"         # GRID GENERATOR OUTPUT FILE
 geometryInputFileName = "geometry.toml" # GEOMETRY BINARY FILE
-solutionInterval = 500            # OUTPUT INTERVAL IN TIMESTEPS
+solutionInterval = 1000            # OUTPUT INTERVAL IN TIMESTEPS
 residualInterval = 1               # RESIDUAL INTERVAL
 dragOutputInterval = 10000             # FORCE COEFFICIENTS
 
@@ -132,9 +124,9 @@ scratchSize = 55
 #//////////////////////////////////////////////////////////////////////
 noSolvers = 1
 noDomains = 12        # #of MPI Process (not necessary for Massive Parallel)
-restartTimeStep = 2300
 restartFile = false #true
-restartInterval = 250
+restartTimeStep = 0
+restartInterval = 200
 useNonSpecifiedRestartFile = false #false #true
 timeStepMethod = 1
 noHaloLayers = 2
@@ -143,5 +135,5 @@ writeOutData = 0
 #sensorBandRefinement = true
 sensorBandAdditionalLayers = 80
 
-detChemExtendedOutput = false
+detChemExtendedOutput = true
 #//////////////////////////////////////////////////////////////////////////////

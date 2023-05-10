@@ -1,0 +1,265 @@
+      _____ ______    ________   ___   ________                             
+ ____|\   _ \  _   \ |\   __  \ |\  \ |\   __  \ ___                   
+  ___\ \  \\\__\ \  \\ \  \|\  \\ \  \\ \  \|\  \ ___    
+   ___\ \  \\|__| \  \\ \   __  \\ \  \\ \   __  \ ___         
+    ___\ \  \    \ \  \\ \  \ \  \\ \  \\ \  \ \  \ ___    
+     ___\ \__\    \ \__\\ \__\ \__\\ \__\\ \__\ \__\ ___    
+      ___\|__|     \|__| \|__|\|__| \|__| \|__|\|__| ____               
+
+Start time:            2023-04-17 16:58:29
+Number of ranks:       28
+Number of OMP threads: 28
+Host (of rank 0):      aia314
+Working directory:     /aia/r024/scratch/xinxin/Test_case/2D_detChem_hydrogenSIC
+User:                  xinxin
+Executable:            ./maia
+Command line args:     ./maia properties_run.toml
+
+Starting a full detailed chemistry simulation.
+Allocation of detailed chemistry primary values done.
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    failure. 
+Take 10 timesteps     2.531e-05      2.698
+Attempt Newton solution of steady-state problem...    failure. 
+Take 10 timesteps     0.0006487     0.6323
+Attempt Newton solution of steady-state problem...    failure. 
+Take 10 timesteps       0.02494    -0.9059
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [11] point grid(s).
+
+..............................................................................
+grid refinement disabled.
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    failure. 
+Take 10 timesteps     0.0001139      5.896
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [11] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 2 3 4 5 6 
+    to resolve H H2 H2O H2O2 HO2 N2 N2O NO NO2 O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    failure. 
+Take 10 timesteps     0.0001139      5.423
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [16] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 5 6 7 8 9 10 
+    to resolve H H2 H2O H2O2 HO2 N2 N2O NO NO2 O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [22] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 7 8 9 10 11 12 13 
+    to resolve H H2 H2O H2O2 HO2 N2 N2O NO O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [29] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 10 11 12 13 14 15 16 17 
+    to resolve H H2 H2O H2O2 HO2 N2 NO O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [37] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 14 15 16 18 19 20 
+    to resolve H2O2 HO2 N2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [43] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 16 17 18 
+    to resolve HO2 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [46] point grid(s).
+
+..............................................................................
+no new points needed in domain 1
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [46] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 
+    to resolve H H2 H2O H2O2 HO2 N2 NO O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [75] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 15 16 17 18 19 25 26 27 28 29 35 36 49 50 51 52 53 54 
+    to resolve H H2 H2O H2O2 HO2 O O2 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [93] point grid(s).
+
+..............................................................................
+no new points needed in domain 1
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [93] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 82 83 84 85 86 88 89 
+    to resolve H H2 H2O H2O2 HO2 N2 NO O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [172] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 40 41 42 70 71 72 73 74 76 77 78 79 80 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 137 138 139 140 144 145 146 147 
+    to resolve H2O2 HO2 N2 O OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [211] point grid(s).
+
+..............................................................................
+no new points needed in domain 1
+
+******************************* MEMORY STATISTICS *******************************
+***** Comment: solver init #0 - #ranks: 28
+***** Location: void Application::run() [with int nDim = 2] (/home/xinxin/scratch/Solver/src/application.cpp:783)
+***** 
+***** Average memory usage: physical = 1867.85 MB; allocation = 1921.38 MB
+***** Minimun memory usage: physical = 1864.95 MB; allocation = 1919.5 MB
+***** Maximum memory usage: physical = 1876.63 MB; allocation = 1931.72 MB
+***** Maximum diff in memory usage: physical = 1876.63 MB; allocation = 1931.72 MB
+***** Total physical memory usage (RAM): 51.0741 GB
+***** Diff total physical memory usage (RAM): 51.0741 GB
+***** Total allocation size (Virtual Memory): 52.5378 GB
+***** Diff total allocation size (Virtual Memory): 52.5378 GB
+***** 
+***** Maximum stack memory: 140 KB; stack limit 8192 KB
+***** 
+***** Minimum available memory per node (meminfo): 73.7475 GB
+***** Minimum free memory per node (RAM): 71.5415 GB
+******************************* MEMORY STATISTICS *******************************
+
+
+
+******************************* MEMORY STATISTICS *******************************
+***** Comment: coupler init - #ranks: 28
+***** Location: void Application::run() [with int nDim = 2] (/home/xinxin/scratch/Solver/src/application.cpp:798)
+***** 
+***** Average memory usage: physical = 1867.86 MB; allocation = 1921.38 MB
+***** Minimun memory usage: physical = 1864.95 MB; allocation = 1919.5 MB
+***** Maximum memory usage: physical = 1876.63 MB; allocation = 1931.72 MB
+***** Maximum diff in memory usage: physical = 0.289062 MB; allocation = 0 MB
+***** Total physical memory usage (RAM): 51.0744 GB
+***** Diff total physical memory usage (RAM): 0.000282288 GB
+***** Total allocation size (Virtual Memory): 52.5378 GB
+***** Diff total allocation size (Virtual Memory): 0 GB
+***** 
+***** Maximum stack memory: 140 KB; stack limit 8192 KB
+***** 
+***** Minimum available memory per node (meminfo): 73.7475 GB
+***** Minimum free memory per node (RAM): 71.5415 GB
+******************************* MEMORY STATISTICS *******************************
+
+
+
+******************************* MEMORY STATISTICS *******************************
+***** Comment: After initialization - #ranks: 28
+***** Location: void Application::run() [with int nDim = 2] (/home/xinxin/scratch/Solver/src/application.cpp:921)
+***** 
+***** Average memory usage: physical = 1882.96 MB; allocation = 1934.36 MB
+***** Minimun memory usage: physical = 1880 MB; allocation = 1932.48 MB
+***** Maximum memory usage: physical = 1891.89 MB; allocation = 1944.7 MB
+***** Maximum diff in memory usage: physical = 15.6602 MB; allocation = 12.9727 MB
+***** Total physical memory usage (RAM): 51.4872 GB
+***** Diff total physical memory usage (RAM): 0.412849 GB
+***** Total allocation size (Virtual Memory): 52.8925 GB
+***** Diff total allocation size (Virtual Memory): 0.354721 GB
+***** 
+***** Maximum stack memory: 140 KB; stack limit 8192 KB
+***** 
+***** Minimum available memory per node (meminfo): 73.3934 GB
+***** Minimum free memory per node (RAM): 71.1638 GB
+******************************* MEMORY STATISTICS *******************************
+
+
+
+******************************* MEMORY STATISTICS *******************************
+***** Comment: After run loop - #ranks: 28
+***** Location: void Application::run() [with int nDim = 2] (/home/xinxin/scratch/Solver/src/application.cpp:1179)
+***** 
+***** Average memory usage: physical = 1886.01 MB; allocation = 1934.36 MB
+***** Minimun memory usage: physical = 1882.42 MB; allocation = 1932.48 MB
+***** Maximum memory usage: physical = 1894.25 MB; allocation = 1944.7 MB
+***** Maximum diff in memory usage: physical = 4.36719 MB; allocation = 0 MB
+***** Total physical memory usage (RAM): 51.5706 GB
+***** Diff total physical memory usage (RAM): 0.0833321 GB
+***** Total allocation size (Virtual Memory): 52.8925 GB
+***** Diff total allocation size (Virtual Memory): 0 GB
+***** 
+***** Maximum stack memory: 140 KB; stack limit 8192 KB
+***** 
+***** Minimum available memory per node (meminfo): 73.3354 GB
+***** Minimum free memory per node (RAM): 71.1022 GB
+******************************* MEMORY STATISTICS *******************************
+
+

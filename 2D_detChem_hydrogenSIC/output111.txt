@@ -1,0 +1,1093 @@
+
+Global MPI information
+MPI Info: nkeys = 1
+MPI Info: [0] key = nc_header_align_size, value = 10240
+      _____ ______    ________   ___   ________                             
+ ____|\   _ \  _   \ |\   __  \ |\  \ |\   __  \ ___                   
+  ___\ \  \\\__\ \  \\ \  \|\  \\ \  \\ \  \|\  \ ___    
+   ___\ \  \\|__| \  \\ \   __  \\ \  \\ \   __  \ ___         
+    ___\ \  \    \ \  \\ \  \ \  \\ \  \\ \  \ \  \ ___    
+     ___\ \__\    \ \__\\ \__\ \__\\ \__\\ \__\ \__\ ___    
+      ___\|__|     \|__| \|__|\|__| \|__| \|__|\|__| ____               
+
+Start time:            2023-04-21 10:24:00
+Number of ranks:       56
+Number of OMP threads: 28
+Host (of rank 0):      aia314
+Working directory:     /aia/r024/scratch/xinxin/Test_case/2D_detChem_hydrogenSIC
+User:                  xinxin
+Executable:            /home/xinxin/scratch/Solver/src/maia
+Command line args:     /home/xinxin/scratch/Solver/src/maia properties_grid.toml
+
+Parallel grid generator started on process 5
+Parallel grid generator started on process 7
+Parallel grid generator started on process 9
+Parallel grid generator started on process 10
+Parallel grid generator started on process 12
+Parallel grid generator started on process 13
+Parallel grid generator started on process 16
+Parallel grid generator started on process 17
+Parallel grid generator started on process 18
+Parallel grid generator started on process 20
+Parallel grid generator started on process 21
+Parallel grid generator started on process 23
+Parallel grid generator started on process 25
+Parallel grid generator started on process 1
+Parallel grid generator started on process 2
+Parallel grid generator started on process 3
+Parallel grid generator started on process 4
+Parallel grid generator started on process 0
+  (1) reading properties
+Parallel grid generator started on process 6
+Parallel grid generator started on process 11
+Parallel grid generator started on process 15
+Parallel grid generator started on process 26
+m_noSolvers: 1
+Parallel grid generator started on process 14
+Parallel grid generator started on process 19
+Parallel grid generator started on process 22
+Parallel grid generator started on process 27
+Parallel grid generator started on process 37
+Parallel grid generator started on process 41
+Parallel grid generator started on process 42
+Parallel grid generator started on process 45
+Parallel grid generator started on process 49
+  (2) initializing member variables
+Parallel grid generator started on process 50
+Parallel grid generator started on process 53
+Parallel grid generator started on process 35
+Parallel grid generator started on process 52
+Parallel grid generator started on process 55
+Parallel grid generator started on process 28
+Parallel grid generator started on process 29
+Parallel grid generator started on process 33
+Parallel grid generator started on process 34
+Parallel grid generator started on process 36
+Parallel grid generator started on process 8
+Parallel grid generator started on process 24
+Parallel grid generator started on process 39
+Parallel grid generator started on process 48
+Parallel grid generator started on process 31
+Parallel grid generator started on process 32
+Parallel grid generator started on process 38
+Parallel grid generator started on process 44
+Parallel grid generator started on process 51
+Parallel grid generator started on process 54
+Parallel grid generator started on process 43
+Parallel grid generator started on process 46
+Parallel grid generator started on process 47
+Parallel grid generator started on process 30
+Parallel grid generator started on process 40
+  (3) initializing geometry
+     + center of gravity: 0.006 0.009 
+     + decisive direction: 1
+     + geometry extents: 0.012 0.018 
+     + bounding box: 0 0 0.012 0.018 
+
+******************************* MEMORY STATISTICS *******************************
+***** Comment: Gridgen after init - #ranks: 56
+***** Location: GridgenPar<nDim>::GridgenPar(MPI_Comm, MInt) [with int nDim = 2; MPI_Comm = ompi_communicator_t*; MInt = int] (/home/xinxin/scratch/Solver/src/GRID/cartesiangridgenpar.cpp:160)
+***** 
+***** Average memory usage: physical = 1985.08 MB; allocation = 5299.88 MB
+***** Minimun memory usage: physical = 1984.45 MB; allocation = 5299.87 MB
+***** Maximum memory usage: physical = 1985.73 MB; allocation = 5300.01 MB
+***** Maximum diff in memory usage: physical = 1985.73 MB; allocation = 5300.01 MB
+***** Total physical memory usage (RAM): 108.559 GB
+***** Diff total physical memory usage (RAM): 108.559 GB
+***** Total allocation size (Virtual Memory): 289.837 GB
+***** Diff total allocation size (Virtual Memory): 289.837 GB
+***** 
+***** Maximum stack memory: 140 KB; stack limit 8192 KB
+***** 
+***** Minimum available memory per node (meminfo): 69.8831 GB
+***** Minimum free memory per node (RAM): 60.1456 GB
+******************************* MEMORY STATISTICS *******************************
+
+
+  (4) creating initial grid
+     + refining from: 0 to 8
+     + initial cube size: 0.018
+     + refining grid on level 0:     
+ 100% done.
+       * finding the neighbors for the new level
+       * detecting outside cells to delete:
+         - outside cells deleted: 0
+         - new offsets: 19799996 19800000
+     + refining grid on level 1:     
+ 100% done.
+       * finding the neighbors for the new level
+       * detecting outside cells to delete:
+         - outside cells deleted: 1
+         - new offsets: 0 15
+     + refining grid on level 2:     
+ 100% done.
+       * finding the neighbors for the new level
+       * detecting outside cells to delete:
+         - outside cells deleted: 18
+         - new offsets: 19799940 19799982
+     + refining grid on level 3:     
+ 100% done.
+       * finding the neighbors for the new level
+       * detecting outside cells to delete:
+         - outside cells deleted: 9
+         - new offsets: 0 159
+     + refining grid on level 4:     
+0% 0% 1% 1% 2% 3% 3% 4% 5% 5% 6% 6% 7% 8% 8% 9% 10% 10% 11% 11% 12% 13% 13% 14% 15% 15% 16% 16% 17% 18% 18% 19% 20% 20% 21% 22% 22% 23% 23% 24% 25% 25% 26% 27% 27% 28% 28% 29% 30% 30% 31% 32% 32% 33% 33% 34% 35% 35% 36% 37% 37% 38% 38% 39% 40% 40% 41% 42% 42% 43% 44% 44% 45% 45% 46% 47% 47% 48% 49% 49% 50% 50% 51% 52% 52% 53% 54% 54% 55% 55% 56% 57% 57% 58% 59% 59% 60% 61% 61% 62% 62% 63% 64% 64% 65% 66% 66% 67% 67% 68% 69% 69% 70% 71% 71% 72% 72% 73% 74% 74% 75% 76% 76% 77% 77% 78% 79% 79% 80% 81% 81% 82% 83% 83% 84% 84% 85% 86% 86% 87% 88% 88% 89% 89% 90% 91% 91% 92% 93% 93% 94% 94% 95% 96% 96% 97% 98% 98% 99%  100% done.
+       * finding the neighbors for the new level
+       * detecting outside cells to delete:
+         - outside cells deleted: 64
+         - new offsets: 19799364 19799936
+     + refining grid on level 5:     
+0% 0% 1% 2% 3% 4% 5% 6% 6% 7% 8% 9% 10% 11% 12% 13% 13% 14% 15% 16% 17% 18% 19% 20% 20% 21% 22% 23% 24% 25% 26% 27% 27% 28% 29% 30% 31% 32% 33% 34% 34% 35% 36% 37% 38% 39% 40% 41% 41% 42% 43% 44% 45% 46% 47% 48% 48% 49% 50% 51% 52% 53% 54% 55% 55% 56% 57% 58% 59% 60% 61% 62% 62% 63% 64% 65% 66% 67% 68% 69% 69% 70% 71% 72% 73% 74% 75% 76% 76% 77% 78% 79% 80% 81% 82% 83% 83% 84% 85% 86% 87% 88% 89% 90% 90% 91% 92% 93% 94% 95% 96% 97% 97% 98% 99%  100% done.
+       * finding the neighbors for the new level
+       * detecting outside cells to delete:
+         - outside cells deleted: 22
+         - new offsets: 0 2266
+     + refining grid on level 6:     
+0% 0% 1% 2% 3% 4% 5% 6% 7% 8% 9% 10% 11% 12% 13% 14% 15% 16% 17% 18% 19% 20% 21% 22% 23% 24% 25% 26% 27% 28% 29% 30% 31% 32% 33% 33% 34% 35% 36% 37% 38% 39% 40% 41% 42% 43% 44% 45% 46% 47% 48% 49% 50% 51% 52% 53% 54% 55% 56% 57% 58% 59% 60% 61% 62% 63% 64% 65% 66% 66% 67% 68% 69% 70% 71% 72% 73% 74% 75% 76% 77% 78% 79% 80% 81% 82% 83% 84% 85% 86% 87% 88% 89% 90% 91% 92% 93% 94% 95% 96% 97% 98% 99%  100% done.
+       * finding the neighbors for the new level
+       * detecting outside cells to delete:
+         - outside cells deleted: 253
+         - new offsets: 19790936 19799747
+     + refining grid on level 7:     
+0% 0% 1% 2% 3% 4% 5% 6% 7% 8% 9% 10% 11% 12% 13% 14% 15% 16% 17% 18% 19% 20% 21% 22% 23% 24% 25% 26% 27% 28% 29% 30% 31% 32% 33% 34% 35% 36% 37% 38% 39% 40% 41% 42% 43% 44% 45% 46% 47% 48% 49% 50% 51% 52% 53% 54% 55% 56% 57% 58% 59% 60% 61% 62% 63% 64% 65% 66% 67% 68% 69% 70% 71% 72% 73% 74% 75% 76% 77% 78% 79% 80% 81% 82% 83% 84% 85% 86% 87% 88% 89% 90% 91% 92% 93% 94% 95% 96% 97% 98% 99%  100% done.
+       * finding the neighbors for the new level
+       * detecting outside cells to delete:
+         - outside cells deleted: 114
+         - new offsets: 0 35130
+     + created 35130 cells for level 8
+     + creating Hilbert curve
+       * resorting cells after Hilbert id
+     + parallelizing grid
+       * calculating rank offsets
+         - rank offsets are : 0 627 1254 1881 2508 3135 3762 4389 5016 5643 6270 6897 7524 8151 8778 9405 10032 10659 11286 11913 12540 13167 13794 14421 15048 15675 16302 16929 17556 18183 18810 19437 20064 20691 21318 21945 22572 23199 23826 24454 25082 25710 26338 26966 27594 28222 28850 29478 30106 30734 31362 31990 32618 33246 33874 34502 35130 
+       * finding communication partners
+         - domain 0 has 4 neighbor(s) [number of halos]: 1 [32]   6 [16]   7 [8]   15 [22]   
+       * finding and moving halo cells that we want to keep
+         - haloCellOffsets on this level for processes [offsets]: 
+           = 1: 32 [19799921 19799953]
+           = 6: 16 [19799953 19799969]
+           = 7: 8 [19799969 19799977]
+           = 15: 22 [19799977 19799999]
+       * shifting my cell array of size 627 by 0 units
+         - moving memory for pointers in cells
+         - moving bitsets and updating the neighbors
+       * cells on level 8 to refine: 0
+         - new cells to create: 0
+         - new no. of cells: 627
+     + updating the halo offsets for the new level for 0 halos
+       * halo cells on this level for processes [offsets]: 
+         - 1:  0 [19799921 19799921]  
+         - 6:  0 [19799921 19799921]  
+         - 7:  0 [19799921 19799921]  
+         - 15:  0 [19799921 19799921]  
+     + refining grid on level 8:     0% 0% 1% 2% 3% 4% 5% 6% 7% 8% 9% 10% 11% 12% 13% 14% 15% 16% 17% 18% 19% 20% 21% 22% 22% 23% 24% 25% 26% 27% 28% 29% 30% 31% 32% 33% 34% 35% 36% 37% 38% 39% 40% 41% 42% 43% 44% 44% 45% 46% 47% 48% 49% 50% 51% 52% 53% 54% 55% 56% 57% 58% 59% 60% 61% 62% 63% 64% 65% 66% 66% 67% 68% 69% 70% 71% 72% 73% 74% 75% 76% 77% 78% 79% 80% 81% 82% 83% 84% 85% 86% 87% 88% 88% 89% 90% 91% 92% 93% 94% 95% 96% 97% 98% 99%  100% done.
+     + refining halo grid on level 8:      100% done.
+       * detecting outside cells to delete:
+           =deleted 0 cells
+         - halo cell deletion:
+           = outside halo cells per domain deleted [new offsets]:
+             . 15:  [19799921 19799921]
+             . 7:  [19799921 19799921]
+             . 6:  [19799921 19799921]
+             . 1:  [19799921 19799921]
+           = outside and unreferenced halo cells deleted [deleted]: 0 [0]
+           = new halo offsets: 19799921 19799921
+           = new halo cells per domain on this level 9:
+             . 1 0
+             . 6 0
+             . 7 0
+             . 15 0
+         - outside cells deleted: 0
+           = new offsets: 627 627
+       * cells on level 9 to refine: 0
+         - new cells to create: 0
+         - new no. of cells: 627
+     + updating the halo offsets for the new level for 0 halos
+       * halo cells on this level for processes [offsets]: 
+         - 1:  0 [19799921 19799921]  
+         - 6:  0 [19799921 19799921]  
+         - 7:  0 [19799921 19799921]  
+         - 15:  0 [19799921 19799921]  
+     + refining grid on level 9:      100% done.
+     + refining halo grid on level 9:      100% done.
+       * detecting outside cells to delete:
+           =deleted 0 cells
+         - halo cell deletion:
+           = outside halo cells per domain deleted [new offsets]:
+             . 15:  [19799921 19799921]
+             . 7:  [19799921 19799921]
+             . 6:  [19799921 19799921]
+             . 1:  [19799921 19799921]
+           = outside and unreferenced halo cells deleted [deleted]: 0 [0]
+           = new halo offsets: 19799921 19799921
+           = new halo cells per domain on this level 10:
+             . 1 0
+             . 6 0
+             . 7 0
+             . 15 0
+         - outside cells deleted: 0
+           = new offsets: 627 627
+       * cells on level 10 to refine: 0
+         - new cells to create: 0
+         - new no. of cells: 627
+     + updating the halo offsets for the new level for 0 halos
+       * halo cells on this level for processes [offsets]: 
+         - 1:  0 [19799921 19799921]  
+         - 6:  0 [19799921 19799921]  
+         - 7:  0 [19799921 19799921]  
+         - 15:  0 [19799921 19799921]  
+     + refining grid on level 10:      100% done.
+     + refining halo grid on level 10:      100% done.
+       * detecting outside cells to delete:
+           =deleted 0 cells
+         - halo cell deletion:
+           = outside halo cells per domain deleted [new offsets]:
+             . 15:  [19799921 19799921]
+             . 7:  [19799921 19799921]
+             . 6:  [19799921 19799921]
+             . 1:  [19799921 19799921]
+           = outside and unreferenced halo cells deleted [deleted]: 0 [0]
+           = new halo offsets: 19799921 19799921
+           = new halo cells per domain on this level 11:
+             . 1 0
+             . 6 0
+             . 7 0
+             . 15 0
+         - outside cells deleted: 0
+           = new offsets: 627 627
+     + checking mesh validity for LB
+       * [1;31mthere are 2 errorneous cells[0m
+         - [1;31mEXPLANATION: there are cells that will be interface cells in the LB computation and which have missing children[0m
+         - [1;31mHINTS      : try to refine in- and outlets[0m
+                        [1;31mmake sure you chose a good combination of localMinBoundaryThreshold and smoothDistance[0m
+     + updating the inter rank neighbors
+     + reordering global ids
+       * traversing all cells depth-first
+       * finding partition cells
+           - found 627
+       * we need to transfer to domain [no. cells to transfer]: 1 [31]   6 [16]   7 [8]   15 [22]   
+       * we need to receive from domain [no. cells to receive]: 1 [32]   6 [16]   7 [8]   15 [22]   
+  (7) writing grid to file
+g_multiSolverGrid: 0
+     + grid file written to '././out/grid.Netcdf'
+=== PARALLELIO FILE LIFETIME: ././out/grid.Netcdf                 | 9.6381e-02 s |
+
+******************************* MEMORY STATISTICS *******************************
+***** Comment: Gridgen finalize - #ranks: 56
+***** Location: GridgenPar<nDim>::GridgenPar(MPI_Comm, MInt) [with int nDim = 2; MPI_Comm = ompi_communicator_t*; MInt = int] (/home/xinxin/scratch/Solver/src/GRID/cartesiangridgenpar.cpp:182)
+***** 
+***** Average memory usage: physical = 2008.47 MB; allocation = 5300.58 MB
+***** Minimun memory usage: physical = 2002.3 MB; allocation = 5300.14 MB
+***** Maximum memory usage: physical = 2019.7 MB; allocation = 5303.89 MB
+***** Maximum diff in memory usage: physical = 34.4883 MB; allocation = 4.00781 MB
+***** Total physical memory usage (RAM): 109.838 GB
+***** Diff total physical memory usage (RAM): 1.27881 GB
+***** Total allocation size (Virtual Memory): 289.875 GB
+***** Diff total allocation size (Virtual Memory): 0.0379906 GB
+***** 
+***** Maximum stack memory: 140 KB; stack limit 8192 KB
+***** 
+***** Minimum available memory per node (meminfo): 69.3 GB
+***** Minimum free memory per node (RAM): 59.5612 GB
+******************************* MEMORY STATISTICS *******************************
+
+
+  (8) Cleaning up
+
+Global MPI information
+MPI Info: nkeys = 1
+MPI Info: [0] key = nc_header_align_size, value = 10240
+      _____ ______    ________   ___   ________                             
+ ____|\   _ \  _   \ |\   __  \ |\  \ |\   __  \ ___                   
+  ___\ \  \\\__\ \  \\ \  \|\  \\ \  \\ \  \|\  \ ___    
+   ___\ \  \\|__| \  \\ \   __  \\ \  \\ \   __  \ ___         
+    ___\ \  \    \ \  \\ \  \ \  \\ \  \\ \  \ \  \ ___    
+     ___\ \__\    \ \__\\ \__\ \__\\ \__\\ \__\ \__\ ___    
+      ___\|__|     \|__| \|__|\|__| \|__| \|__|\|__| ____               
+
+Start time:            2023-04-21 10:24:01
+Number of ranks:       56
+Number of OMP threads: 28
+Host (of rank 0):      aia314
+Working directory:     /aia/r024/scratch/xinxin/Test_case/2D_detChem_hydrogenSIC
+User:                  xinxin
+Executable:            /home/xinxin/scratch/Solver/src/maia
+Command line args:     /home/xinxin/scratch/Solver/src/maia properties_run.toml
+
+m_noSolvers: 1
+
+=== MAIA RUN LOOP ===
+
+=== MAIA RUN DURATION: Create geometries                   | min: 1.4219e-03 s | avg: 2.8087e-03 s | max: 4.7569e-03 s |
+=== Create grid...
+=== Create Cartesian grid...
+Grid consisting of 1 solvers.
+[0;31m#### WARNING:[0m haloMode==0 is deprecated!!!
+Loading grid file ././out/grid.Netcdf
+=== MAIA GRID DURATION: Open grid file                      | min: 1.7885e-02 s | avg: 3.6839e-02 s | max: 5.3453e-02 s |
+=== MAIA GRID DURATION: Read attributes etc                 | min: 5.4836e-05 s | avg: 7.9811e-05 s | max: 1.2398e-04 s |
+  * partition grid on 56 domains... global workload imbalance is 0.853667% 
+=== MAIA GRID DURATION: Partition                           | min: 8.3759e-03 s | avg: 8.8315e-03 s | max: 9.4829e-03 s |
+  * create data structure for 171964 cells
+=== MAIA GRID DURATION: Read cell info                      | min: 8.8406e-04 s | avg: 1.7302e-03 s | max: 2.4779e-03 s |
+=== MAIA GRID DURATION: Correct offsets PLS                 | min: 1.6189e-04 s | avg: 1.9135e-04 s | max: 2.1911e-04 s |
+=== MAIA GRID DURATION: Read solver info                    | min: 1.0014e-05 s | avg: 1.4569e-05 s | max: 4.0054e-05 s |
+  * setup grid connectivity from level 8 to 11
+=== MAIA GRID DURATION: Read min cell info                  | min: 3.0229e-03 s | avg: 6.5573e-03 s | max: 1.5504e-02 s |
+=== MAIA GRID DURATION: Exchange partition level ancestors  | min: 2.8610e-06 s | avg: 5.5262e-06 s | max: 8.1062e-06 s |
+=== MAIA GRID DURATION: Setup local grid subtrees           | min: 2.1935e-05 s | avg: 4.4486e-05 s | max: 7.2002e-05 s |
+=== MAIA GRID DURATION: Propagate neighbors                 | min: 4.2219e-03 s | avg: 5.3180e-03 s | max: 6.1920e-03 s |
+done.
+=== MAIA GRID DURATION: Load grid total                     | min: 8.8440e-02 s | avg: 9.3004e-02 s | max: 9.5570e-02 s |
+=== PARALLELIO FILE LIFETIME: ././out/grid.Netcdf                 | 9.0370e-02 s |
+Establish window/halo connectivity...
+  * create minLevel exchange cells... done.
+=== MAIA WINDOW/HALO DURATION: Create min level exchange cells     | min: 4.3690e-03 s | avg: 5.0011e-03 s | max: 5.3959e-03 s |
+  * create higher level exchange cells...
+=== MAIA WINDOW/HALO DURATION: Create higher level exchange cells  | min: 8.8291e-03 s | avg: 1.2180e-02 s | max: 1.3505e-02 s |
+done.
+=== MAIA WINDOW/HALO DURATION: Window/halo total                   | min: 2.0468e-02 s | avg: 2.1047e-02 s | max: 2.2170e-02 s |
+=== 458.82 KB globally allocated by CartesianGrid. Total global memory: 459.91 KB. ===
+===  37.13 KB maximum globally allocated by CartesianGrid. ===
+=== done.
+=== MAIA RUN DURATION: Create grid                         | min: 1.3113e-01 s | avg: 1.3118e-01 s | max: 1.3126e-01 s |
+FV-MB is off
+FV-LS is off
+LB is off
+LB LS is off
+LS SOLVER is off
+COMBUSTION is off
+DG is off
+LS-RANS is off
+=== Create solvers...
+=== Create MAIA_FINITE_VOLUME...
+Starting a full detailed chemistry simulation.
+Allocation of detailed chemistry primary values done.
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    failure. 
+Take 10 timesteps     7.119e-06      3.355
+Attempt Newton solution of steady-state problem...    failure. 
+Take 10 timesteps     0.0001216      1.927
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [11] point grid(s).
+
+..............................................................................
+grid refinement disabled.
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    failure. 
+Take 10 timesteps     0.0001139      6.466
+Attempt Newton solution of steady-state problem...    failure. 
+Take 10 timesteps     0.0002883      5.268
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [11] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 2 3 4 5 6 
+    to resolve H H2 H2O H2O2 HO2 N2 O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    failure. 
+Take 10 timesteps     0.0001709      5.079
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [16] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 4 5 6 7 8 9 
+    to resolve H H2 H2O H2O2 HO2 N2 O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    failure. 
+Take 10 timesteps     0.0001709      5.163
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [22] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 7 8 9 10 11 12 13 
+    to resolve H H2 H2O H2O2 HO2 N2 O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [29] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 11 12 13 14 15 16 17 18 
+    to resolve H H2 H2O H2O2 HO2 N2 O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [37] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 14 15 16 17 19 20 21 
+    to resolve H2O2 HO2 N2 O OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [44] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 19 20 21 22 
+    to resolve H2O2 HO2 OH 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [48] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 21 22 24 25 
+    to resolve H2O2 HO2 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [52] point grid(s).
+
+..............................................................................
+no new points needed in domain 1
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [52] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 
+    to resolve H H2 H2O H2O2 HO2 N2 O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [79] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 20 21 22 33 34 35 40 41 42 43 44 48 49 50 51 52 53 54 55 56 58 59 60 61 62 
+    to resolve H H2 H2O H2O2 HO2 N2 O O2 OH 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [104] point grid(s).
+
+..............................................................................
+no new points needed in domain 1
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [104] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 
+    to resolve H H2 H2O H2O2 HO2 N2 O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [185] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 28 29 34 35 36 37 38 51 52 53 58 59 60 61 62 63 64 65 66 90 91 92 93 94 95 96 97 98 99 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 157 158 159 160 
+    to resolve H H2 H2O H2O2 HO2 N2 O O2 OH 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [235] point grid(s).
+
+..............................................................................
+no new points needed in domain 1
+Computed flame thickness: 0.000922161
+Resolution at maximum refinement level: 4.39453e-06
+Flame front resolved by a total of 209.843 cells
+Solver #0 - maximum number of window cells among ranks: 1304
+Solver #0 - maximum number of halo cells among ranks: 1314
+===  84.10 MB globally allocated by FvCartesianSolverXD. Total global memory:  85.96 MB. ===
+===   1.59 MB maximum globally allocated by FvCartesianSolverXD. ===
+===  15.44 GB globally allocated by FvBndryCndXD. Total global memory:  15.52 GB. ===
+=== 282.29 MB maximum globally allocated by FvBndryCndXD. ===
+=== done.
+=== MAIA RUN DURATION: Create solver #0                    | min: 1.8915e+00 s | avg: 1.8915e+00 s | max: 1.8917e+00 s |
+=== MAIA RUN DURATION: Create solvers                      | min: 1.8919e+00 s | avg: 1.8920e+00 s | max: 1.8920e+00 s |
+=== Create couplers...
+=== done.
+=== MAIA RUN DURATION: Create couplers                     | min: 0.0000e+00 s | avg: 4.5129e-07 s | max: 5.0068e-06 s |
+=== Create grid controller...
+=== done.
+=== MAIA RUN DURATION: Create grid controller              | min: 4.3607e-04 s | avg: 4.5733e-04 s | max: 4.8995e-04 s |
+=== Init solvers...
+=== MAIA RUN DURATION: Init solver #0                      | min: 5.5370e-03 s | avg: 7.3726e-03 s | max: 9.0079e-03 s |
+
+******************************* MEMORY STATISTICS *******************************
+***** Comment: solver init #0 - #ranks: 56
+***** Location: void Application::run() [with int nDim = 2] (/home/xinxin/scratch/Solver/src/application.cpp:783)
+***** 
+***** Average memory usage: physical = 992.78 MB; allocation = 1047.04 MB
+***** Minimun memory usage: physical = 988.527 MB; allocation = 1043.49 MB
+***** Maximum memory usage: physical = 1001.8 MB; allocation = 1056.07 MB
+***** Maximum diff in memory usage: physical = 1001.8 MB; allocation = 1056.07 MB
+***** Total physical memory usage (RAM): 54.2927 GB
+***** Diff total physical memory usage (RAM): 54.2927 GB
+***** Total allocation size (Virtual Memory): 57.2599 GB
+***** Diff total allocation size (Virtual Memory): 57.2599 GB
+***** 
+***** Maximum stack memory: 140 KB; stack limit 8192 KB
+***** 
+***** Minimum available memory per node (meminfo): 97.3594 GB
+***** Minimum free memory per node (RAM): 87.6085 GB
+******************************* MEMORY STATISTICS *******************************
+
+
+=== MAIA RUN DURATION: Init solvers                        | min: 1.0541e-02 s | avg: 1.0571e-02 s | max: 1.0652e-02 s |
+=== done.
+=== Init couplers...
+=== MAIA RUN DURATION: Init couplers                       | min: 0.0000e+00 s | avg: 2.5545e-07 s | max: 2.1458e-06 s |
+
+******************************* MEMORY STATISTICS *******************************
+***** Comment: coupler init - #ranks: 56
+***** Location: void Application::run() [with int nDim = 2] (/home/xinxin/scratch/Solver/src/application.cpp:798)
+***** 
+***** Average memory usage: physical = 992.801 MB; allocation = 1047.04 MB
+***** Minimun memory usage: physical = 988.527 MB; allocation = 1043.49 MB
+***** Maximum memory usage: physical = 1001.8 MB; allocation = 1056.07 MB
+***** Maximum diff in memory usage: physical = 0.628906 MB; allocation = 0 MB
+***** Total physical memory usage (RAM): 54.2938 GB
+***** Diff total physical memory usage (RAM): 0.00111008 GB
+***** Total allocation size (Virtual Memory): 57.2599 GB
+***** Diff total allocation size (Virtual Memory): 0 GB
+***** 
+***** Maximum stack memory: 140 KB; stack limit 8192 KB
+***** 
+***** Minimum available memory per node (meminfo): 97.359 GB
+***** Minimum free memory per node (RAM): 87.608 GB
+******************************* MEMORY STATISTICS *******************************
+
+
+=== done.
+=== Initial adaptation...
+=== Initialising solver-adaptation at time-step -1
+Setting 1 sensors for fv-Solver adaptation.
+Setting 1 sensors for fv-Solver adaptation.
+Setting 1 sensors for fv-Solver adaptation.
+Setting 1 sensors for fv-Solver adaptation.
+Performing intermediate load balancing step.
+=== Dynamic load balancing at time step -1
+Domain statistics before load balancing at global time step -1: avg no cells=3070, min=3015, max=3097, max deviation=55, max deviation leaf=645, total=171964
+Solver-statistics for solver 0 min= 3015 max= 3097 total= 171964 avg= 3070
+global workload imbalance is 0.853667% 
+Establish window/halo connectivity...
+  * create minLevel exchange cells... done.
+=== MAIA WINDOW/HALO DURATION: Create min level exchange cells     | min: 1.7869e-03 s | avg: 2.5864e-03 s | max: 4.1740e-03 s |
+  * create higher level exchange cells...
+=== MAIA WINDOW/HALO DURATION: Create higher level exchange cells  | min: 6.2311e-03 s | avg: 8.4991e-03 s | max: 9.3338e-03 s |
+done.
+=== MAIA WINDOW/HALO DURATION: Window/halo total                   | min: 1.3171e-02 s | avg: 1.4238e-02 s | max: 1.6084e-02 s |
+Solver #0 - maximum number of window cells among ranks: 1304
+Solver #0 - maximum number of halo cells among ranks: 1314
+Domain statistics after load balancing at global time step -1: avg no cells=3070, min=3015, max=3097, max deviation=55, max deviation leaf=645, total=171964
+Solver-statistics for solver 0 min= 3015 max= 3097 total= 171964 avg= 3070
+Resetting DLB timers at timestep -1
+=== MAIA DLB DURATION: DLB preparation/timers              | min: 5.3287e-04 s | avg: 5.7137e-04 s | max: 6.4111e-04 s |
+=== MAIA DLB DURATION: Imbalance evaluation                | min: 9.5367e-07 s | avg: 2.0010e-06 s | max: 3.0994e-06 s |
+=== MAIA DLB DURATION: Update partition cells              | min: 0.0000e+00 s | avg: 1.3198e-07 s | max: 1.1921e-06 s |
+=== MAIA DLB DURATION: New partitioning                    | min: 2.6019e-03 s | avg: 3.4989e-03 s | max: 3.8781e-03 s |
+=== MAIA DLB DURATION:   Reset solver #0                   | min: 1.3709e-04 s | avg: 3.2928e-04 s | max: 4.3988e-04 s |
+=== MAIA DLB DURATION:   Prepare grid                      | min: 6.5899e-04 s | avg: 8.3960e-04 s | max: 9.6893e-04 s |
+=== MAIA DLB DURATION:   Data sizes solver #0              | min: 3.6311e-04 s | avg: 4.5361e-04 s | max: 5.3191e-04 s |
+=== MAIA DLB DURATION: Prepare balancing                   | min: 1.3630e-03 s | avg: 1.6248e-03 s | max: 1.8129e-03 s |
+=== MAIA DLB DURATION: Balance grid                        | min: 2.4083e-02 s | avg: 2.4181e-02 s | max: 2.4376e-02 s |
+=== MAIA DLB DURATION: Redistribute solver #0              | min: 5.4908e-04 s | avg: 7.8642e-04 s | max: 9.8610e-04 s |
+=== MAIA DLB DURATION: BalancePre solver #0                | min: 7.7132e-02 s | avg: 8.2035e-02 s | max: 8.6336e-02 s |
+=== MAIA DLB DURATION: SetData1 solver #0                  | min: 2.5892e-04 s | avg: 4.5706e-03 s | max: 9.5320e-03 s |
+=== MAIA DLB DURATION: BalancePost solver #0               | min: 5.8410e-03 s | avg: 6.6222e-03 s | max: 7.6599e-03 s |
+=== MAIA DLB DURATION: SetData2 solver #0                  | min: 7.7009e-05 s | avg: 1.1327e-03 s | max: 1.9281e-03 s |
+=== MAIA DLB DURATION: Balance solver #0                   | min: 9.4935e-02 s | avg: 9.5160e-02 s | max: 9.5322e-02 s |
+=== MAIA DLB DURATION: Balance solvers                     | min: 9.4939e-02 s | avg: 9.5163e-02 s | max: 9.5325e-02 s |
+=== MAIA DLB DURATION: Balance couplers                    | min: 0.0000e+00 s | avg: 7.4506e-07 s | max: 8.1062e-06 s |
+=== MAIA DLB DURATION: Finalize balance solver #0          | min: 0.0000e+00 s | avg: 3.7040e-07 s | max: 1.1921e-06 s |
+=== MAIA DLB DURATION: Finalize balance total              | min: 0.0000e+00 s | avg: 1.1367e-06 s | max: 2.8610e-06 s |
+=== MAIA DLB DURATION: Balance total                       | min: 1.3032e-01 s | avg: 1.3036e-01 s | max: 1.3044e-01 s |
+=== Dynamic load balancing performed at timestep -1! Duration: 0.130975 s
+===   0.00 KB globally allocated by gridcontroller::balance(). Total global memory:  15.56 GB. ===
+===   0.00 KB maximum globally allocated by gridcontroller::balance(). ===
+Domain statistics after adaptation at global time step -1: avg no cells=3070, min=3015, max=3097, max deviation=55, max deviation leaf=645, total=171964
+Solver-statistics for solver 0 min= 3015 max= 3097 total= 171964 avg= 3070
+=== Finished adaptation
+=== done.
+=== Finalize initialization of solvers and couplers...
+Solver #0 - maximum number of internal cells among ranks: 3097
+Solver #0 - maximum number of cells among ranks: 4364
+=== MAIA RUN DURATION: Finalize initialization solver #0   | min: 4.6299e-02 s | avg: 4.6767e-02 s | max: 4.7688e-02 s |
+=== MAIA RUN DURATION: Finalize initialization             | min: 4.8001e-02 s | avg: 4.8049e-02 s | max: 4.8279e-02 s |
+=== done.
+=== MAIA RUN DURATION: Finalize coupler init               | min: 0.0000e+00 s | avg: 7.8338e-07 s | max: 2.1458e-06 s |
+Saving adapted grid file for all solvers restartGrid_000.Netcdf... === PARALLELIO FILE LIFETIME: ./out/restartGrid_000.Netcdf        | 7.4195e-02 s |
+ok.
+Writing restart files at time step 0 :
+Writing flow variables for solver 0 at time step 0 ...=== PARALLELIO FILE LIFETIME: ././out/restartVariables_0.Netcdf   | 3.5842e-01 s |
+ok
+
+******************************* MEMORY STATISTICS *******************************
+***** Comment: After initialization - #ranks: 56
+***** Location: void Application::run() [with int nDim = 2] (/home/xinxin/scratch/Solver/src/application.cpp:921)
+***** 
+***** Average memory usage: physical = 1013 MB; allocation = 1060.4 MB
+***** Minimun memory usage: physical = 1008.44 MB; allocation = 1056.68 MB
+***** Maximum memory usage: physical = 1021.51 MB; allocation = 1069.74 MB
+***** Maximum diff in memory usage: physical = 21.832 MB; allocation = 14.1719 MB
+***** Total physical memory usage (RAM): 55.3985 GB
+***** Diff total physical memory usage (RAM): 1.10473 GB
+***** Total allocation size (Virtual Memory): 57.9907 GB
+***** Diff total allocation size (Virtual Memory): 0.730858 GB
+***** 
+***** Maximum stack memory: 140 KB; stack limit 8192 KB
+***** 
+***** Minimum available memory per node (meminfo): 96.8558 GB
+***** Minimum free memory per node (RAM): 87.1073 GB
+******************************* MEMORY STATISTICS *******************************
+
+
+=== MAIA RUN DURATION: Full initialization                 | min: 2.8468e+00 s | avg: 2.8482e+00 s | max: 2.8495e+00 s |
+Resetting DLB timers at timestep 1
+Resetting DLB timers at timestep 2
+=== Initialising solver-adaptation at time-step 10
+Setting 2 sensors for fv-Solver adaptation.
+Setting 2 sensors for fv-Solver adaptation.
+Setting 2 sensors for fv-Solver adaptation.
+Setting 2 sensors for fv-Solver adaptation.
+ The Temperature is negative at index 688 xcoord = 0.00451685 ycoord = 0.000648193 Pressure = -9050.52 rho  = 0.114517
+ fiexed Temperature 
+terminate called after throwing an instance of 'Cantera::CanteraError'
+  what():  
+*******************************************************************************
+CanteraError thrown by Phase::setTemperature:
+temperature must be positive. T = -198.30941558132054
+*******************************************************************************
+
+[aia314:11307] *** Process received signal ***
+[aia314:11307] Signal: Aborted (6)
+[aia314:11307] Signal code:  (-6)
+[aia314:11307] [ 0] /lib64/libpthread.so.0(+0x132d0)[0x7f2a9a1ac2d0]
+[aia314:11307] [ 1] /lib64/libc.so.6(gsignal+0x110)[0x7f2a99e17520]
+[aia314:11307] [ 2] /lib64/libc.so.6(abort+0x151)[0x7f2a99e18b01]
+[aia314:11307] [ 3]  The Temperature is negative at index 850 xcoord = 0.00738208 ycoord = 0.00592163 Pressure = -10589.2 rho  = 0.203059
+ fiexed Temperature 
+ The Temperature is negative at index 929 xcoord = 0.00709204 ycoord = 0.00568433 Pressure = -5778.84 rho  = 0.191786
+ fiexed Temperature 
+terminate called after throwing an instance of 'Cantera::CanteraError'
+  what():  
+*******************************************************************************
+CanteraError thrown by Phase::setTemperature:
+temperature must be positive. T = -131.30197247041463
+*******************************************************************************
+
+[aia316:54023] *** Process received signal ***
+[aia316:54023] Signal: Aborted (6)
+[aia316:54023] Signal code:  (-6)
+[aia316:54023] [ 0] /lib64/libpthread.so.0(+0x132d0)[0x7f373a7d32d0]
+[aia316:54023] [ 1] /lib64/libc.so.6(gsignal+0x110)[0x7f373a43e520]
+[aia316:54023] [ 2] /lib64/libc.so.6(abort+0x151)[0x7f373a43fb01]
+[aia316:54023] [ 3] terminate called after throwing an instance of 'Cantera::CanteraError'
+  what():  
+*******************************************************************************
+CanteraError thrown by Phase::setTemperature:
+temperature must be positive. T = -75.8013433060315
+*******************************************************************************
+
+[aia316:54032] *** Process received signal ***
+[aia316:54032] Signal: Aborted (6)
+[aia316:54032] Signal code:  (-6)
+[aia316:54032] [ 0] /lib64/libpthread.so.0(+0x132d0)[0x7ff994a4c2d0]
+[aia316:54032] [ 1] /lib64/libc.so.6(gsignal+0x110)[0x7ff9946b7520]
+[aia316:54032] [ 2] /lib64/libc.so.6(abort+0x151)[0x7ff9946b8b01]
+[aia316:54032] [ 3] /home/xinxin/scratch/Solver/src/maia[0xaf0cef]
+[aia316:54023] [ 4] /home/xinxin/scratch/Solver/src/maia[0xaf0cef]
+[aia316:54032] [ 4]  The Temperature is negative at index 720 xcoord = 0.00673169 ycoord = 0.00535034 Pressure = -2233.2 rho  = 0.288164
+ fiexed Temperature 
+/home/xinxin/scratch/Solver/src/maia[0xaf0cef]
+[aia314:11307] [ 4] terminate called after throwing an instance of 'Cantera::CanteraError'
+  what():  
+*******************************************************************************
+CanteraError thrown by Phase::setTemperature:
+temperature must be positive. T = -19.51513594592595
+*******************************************************************************
+
+[aia316:54034] *** Process received signal ***
+[aia316:54034] Signal: Aborted (6)
+[aia316:54034] Signal code:  (-6)
+[aia316:54034] [ 0] /lib64/libpthread.so.0(+0x132d0)[0x7f004b95f2d0]
+[aia316:54034] [ 1] /lib64/libc.so.6(gsignal+0x110)[0x7f004b5ca520]
+[aia316:54034] [ 2] /lib64/libc.so.6(abort+0x151)[0x7f004b5cbb01]
+[aia316:54034] [ 3] /home/xinxin/scratch/Solver/src/maia(_ZN10__cxxabiv111__terminateEPFvvE+0xa)[0x6c474ca]
+[aia314:11307] [ 5] /home/xinxin/scratch/Solver/src/maia(_ZN10__cxxabiv111__terminateEPFvvE+0xa)[0x6c474ca]
+[aia316:54023] [ 5] /home/xinxin/scratch/Solver/src/maia(_ZN10__cxxabiv111__terminateEPFvvE+0xa)[0x6c474ca]
+[aia316:54032] [ 5]  The Temperature is negative at index 629 xcoord = 0.00449048 ycoord = 0.000226318 Pressure = -1197.22 rho  = 0.188781
+ fiexed Temperature 
+ The Temperature is negative at index 536 xcoord = 0.00468384 ycoord = 0.0016897 Pressure = -3273.82 rho  = 0.283853
+ fiexed Temperature 
+terminate called after throwing an instance of 'Cantera::CanteraError'
+  what():  
+*******************************************************************************
+CanteraError thrown by Phase::setTemperature:
+temperature must be positive. T = -15.970382658948244
+*******************************************************************************
+
+terminate called after throwing an instance of 'Cantera::CanteraError'
+  what():  
+*******************************************************************************
+CanteraError thrown by Phase::setTemperature:
+temperature must be positive. T = -29.01079459440431
+*******************************************************************************
+
+[aia314:11308] *** Process received signal ***
+[aia314:11308] Signal: Aborted (6)
+[aia314:11308] Signal code:  (-6)
+[aia314:11310] *** Process received signal ***
+[aia314:11310] Signal: Aborted (6)
+[aia314:11310] Signal code:  (-6)
+[aia314:11310] [ 0] /lib64/libpthread.so.0(+0x132d0)[0x7f4d792332d0]
+[aia314:11310] [ 1] /lib64/libc.so.6(gsignal+0x110)[0x7f4d78e9e520]
+[aia314:11310] [ 2] /lib64/libc.so.6(abort+0x151)[0x7f4d78e9fb01]
+[aia314:11310] [aia314:11308] [ 0] /lib64/libpthread.so.0(+0x132d0)[0x7eff766fe2d0]
+[aia314:11308] [ 1] /lib64/libc.so.6(gsignal+0x110)[0x7eff76369520]
+[aia314:11308] [ 2] /lib64/libc.so.6(abort+0x151)[0x7eff7636ab01]
+[aia314:11308] [ 3] [ 3]  The Temperature is negative at index 30 xcoord = 0.00507935 ycoord = 0.00291577 Pressure = -12279.7 rho  = 0.160544
+ fiexed Temperature 
+ The Temperature is negative at index 545 xcoord = 0.00540454 ycoord = 0.00359253 Pressure = -1375.84 rho  = 0.0840915
+ fiexed Temperature 
+ The Temperature is negative at index 582 xcoord = 0.00599341 ycoord = 0.00450659 Pressure = -1992.35 rho  = 0.141286
+ fiexed Temperature 
+ The Temperature is negative at index 14 xcoord = 0.00598462 ycoord = 0.0044978 Pressure = -12117.8 rho  = 0.156886
+ fiexed Temperature 
+ The Temperature is negative at index 690 xcoord = 0.00478931 ycoord = 0.00210718 Pressure = -1675.91 rho  = 0.196457
+ fiexed Temperature 
+terminate called after throwing an instance of 'Cantera::CanteraError'
+  what():  
+*******************************************************************************
+CanteraError thrown by Phase::setTemperature:
+temperature must be positive. T = -191.9795527471682
+*******************************************************************************
+
+[aia314:11321] *** Process received signal ***
+[aia314:11321] Signal: Aborted (6)
+[aia314:11321] Signal code:  (-6)
+[aia314:11321] [ 0] /lib64/libpthread.so.0(+0x132d0)[0x7f228ee9d2d0]
+[aia314:11321] [ 1] terminate called after throwing an instance of 'Cantera::CanteraError'
+  what():  
+*******************************************************************************
+CanteraError thrown by Phase::setTemperature:
+temperature must be positive. T = -41.01879559591059
+*******************************************************************************
+
+[aia314:11325] *** Process received signal ***
+[aia314:11325] Signal: Aborted (6)
+[aia314:11325] Signal code:  (-6)
+terminate called after throwing an instance of 'Cantera::CanteraError'
+  what():  
+*******************************************************************************
+CanteraError thrown by Phase::setTemperature:
+temperature must be positive. T = -35.44653183359231
+*******************************************************************************
+
+[aia314:11338] *** Process received signal ***
+[aia314:11338] Signal: Aborted (6)
+[aia314:11338] Signal code:  (-6)
+terminate called after throwing an instance of 'Cantera::CanteraError'
+  what():  
+*******************************************************************************
+CanteraError thrown by Phase::setTemperature:
+temperature must be positive. T = -21.474555885113276
+*******************************************************************************
+
+[aia314:11309] *** Process received signal ***
+[aia314:11309] Signal: Aborted (6)
+[aia314:11309] Signal code:  (-6)
+/lib64/libc.so.6(gsignal+0x110)[0x7f228eb08520]
+[aia314:11321] [ 2] /lib64/libc.so.6(abort+0x151)[0x7f228eb09b01]
+[aia314:11321] [ 3] terminate called after throwing an instance of 'Cantera::CanteraError'
+  what():  
+*******************************************************************************
+CanteraError thrown by Phase::setTemperature:
+temperature must be positive. T = -194.41989757706645
+*******************************************************************************
+
+[aia314:11328] *** Process received signal ***
+[aia314:11328] Signal: Aborted (6)
+[aia314:11328] Signal code:  (-6)
+[aia314:11338] [ 0] /lib64/libpthread.so.0(+0x132d0)[0x7fe19dc8c2d0]
+[aia314:11338] [ 1] /lib64/libc.so.6(gsignal+0x110)[0x7fe19d8f7520]
+[aia314:11338] [ 2] [aia314:11325] [ 0] /lib64/libpthread.so.0(+0x132d0)[0x7ff6c9acf2d0]
+[aia314:11325] [ 1] /lib64/libc.so.6(gsignal+0x110)[0x7ff6c973a520]
+[aia314:11325] [ 2] /lib64/libc.so.6(abort+0x151)[0x7ff6c973bb01]
+[aia314:11325] [ 3] /home/xinxin/scratch/Solver/src/maia[0xaf0cef]
+[aia316:54034] [ 4] [aia314:11309] [ 0] /lib64/libpthread.so.0(+0x132d0)[0x7f60ecda62d0]
+[aia314:11309] [ 1] /lib64/libc.so.6(gsignal+0x110)[0x7f60eca11520]
+[aia314:11309] [ 2] /lib64/libc.so.6(abort+0x151)[0x7fe19d8f8b01]
+[aia314:11338] [ 3] /home/xinxin/scratch/Solver/src/maia[0x6c47535]
+[aia314:11307] [ 6] [aia314:11328] [ 0] /lib64/libpthread.so.0(+0x132d0)[0x7f5499ecd2d0]
+[aia314:11328] [ 1] /lib64/libc.so.6(gsignal+0x110)[0x7f5499b38520]
+[aia314:11328] [ 2] /lib64/libc.so.6(abort+0x151)[0x7f5499b39b01]
+[aia314:11328] [ 3] /home/xinxin/scratch/Solver/src/maia[0x6c47535]
+[aia316:54032] [ 6] /lib64/libc.so.6(abort+0x151)[0x7f60eca12b01]
+[aia314:11309] [ 3] /home/xinxin/scratch/Solver/src/maia[0x6c47535]
+[aia316:54023] [ 6]  The Temperature is negative at index 587 xcoord = 0.00646802 ycoord = 0.00507788 Pressure = -105571 rho  = 0.0622579
+ fiexed Temperature 
+/home/xinxin/scratch/Solver/src/maia[0xaf0cef]
+[aia314:11308] [ 4] /home/xinxin/scratch/Solver/src/maia[0xaf0cef]
+[aia314:11310] [ 4] terminate called after throwing an instance of 'Cantera::CanteraError'
+  what():  
+*******************************************************************************
+CanteraError thrown by Phase::setTemperature:
+temperature must be positive. T = -4240.130018842988
+*******************************************************************************
+
+[aia316:54036] *** Process received signal ***
+[aia316:54036] Signal: Aborted (6)
+[aia316:54036] Signal code:  (-6)
+[aia316:54036] [ 0] /lib64/libpthread.so.0(+0x132d0)[0x7f3c132872d0]
+[aia316:54036] [ 1] /lib64/libc.so.6(gsignal+0x110)[0x7f3c12ef2520]
+[aia316:54036] [ 2] /lib64/libc.so.6(abort+0x151)[0x7f3c12ef3b01]
+[aia316:54036] [ 3] /home/xinxin/scratch/Solver/src/maia(_ZN10__cxxabiv111__terminateEPFvvE+0xa)[0x6c474ca]
+[aia316:54034] [ 5] /home/xinxin/scratch/Solver/src/maia(__cxa_rethrow+0x4a)[0x6c476da]
+[aia316:54032] [ 7] /home/xinxin/scratch/Solver/src/maia(__cxa_rethrow+0x4a)[0x6c476da]
+[aia316:54023] [ 7] /home/xinxin/scratch/Solver/src/maia[0xaf0cef]
+[aia314:11321] [ 4]  The Temperature is negative at index 711 xcoord = 0.00621313 ycoord = 0.00478784 Pressure = -13748.3 rho  = 0.156153
+ fiexed Temperature 
+/home/xinxin/scratch/Solver/src/maia[0xaf0cef]
+[aia314:11325] [ 4] terminate called after throwing an instance of 'Cantera::CanteraError'
+/home/xinxin/scratch/Solver/src/maia[0xaf0cef]
+[aia314:11309] [ 4] /home/xinxin/scratch/Solver/src/maia[0xaf0cef]
+[aia314:11328] [ 4] /home/xinxin/scratch/Solver/src/maia[0xaf0cef]
+[aia314:11338] [ 4]   what():  
+*******************************************************************************
+CanteraError thrown by Phase::setTemperature:
+temperature must be positive. T = -221.58775445511813
+*******************************************************************************
+
+[aia316:54038] *** Process received signal ***
+[aia316:54038] Signal: Aborted (6)
+[aia316:54038] Signal code:  (-6)
+[aia316:54038] [ 0] /lib64/libpthread.so.0(+0x132d0)[0x7f09e0f682d0]
+[aia316:54038] [ 1] /lib64/libc.so.6(gsignal+0x110)[0x7f09e0bd3520]
+[aia316:54038] [ 2] /lib64/libc.so.6(abort+0x151)[0x7f09e0bd4b01]
+[aia316:54038] [ 3] /home/xinxin/scratch/Solver/src/maia(__cxa_rethrow+0x4a)[0x6c476da]
+[aia314:11307] [ 7] /home/xinxin/scratch/Solver/src/maia[0xaf0cef]
+[aia316:54036] [ 4] /home/xinxin/scratch/Solver/src/maia[0xaf0cef]
+[aia316:54038] [ 4] /home/xinxin/scratch/Solver/src/maia(_ZN10__cxxabiv111__terminateEPFvvE+0xa)[0x6c474ca]
+[aia314:11310] [ 5] /home/xinxin/scratch/Solver/src/maia(_ZN10__cxxabiv111__terminateEPFvvE+0xa)[0x6c474ca]
+[aia314:11308] [ 5] /home/xinxin/scratch/Solver/src/maia[0x6c47535]
+[aia316:54034] [ 6] /home/xinxin/scratch/Solver/src/maia(_ZN7Cantera11ThermoPhase11setState_TPEdd+0xa8)[0x6933268]
+[aia316:54032] [ 8] /home/xinxin/scratch/Solver/src/maia(_ZN7Cantera11ThermoPhase11setState_TPEdd+0xa8)[0x6933268]
+[aia316:54023] [ 8] /home/xinxin/scratch/Solver/src/maia(_ZN10__cxxabiv111__terminateEPFvvE+0xa)[0x6c474ca]
+[aia314:11321] [ 5] /home/xinxin/scratch/Solver/src/maia(_ZN10__cxxabiv111__terminateEPFvvE+0xa)[0x6c474ca]
+[aia316:54036] [ 5] /home/xinxin/scratch/Solver/src/maia(_ZN10__cxxabiv111__terminateEPFvvE+0xa)[0x6c474ca]
+[aia314:11325] [ 5] /home/xinxin/scratch/Solver/src/maia(_ZN10__cxxabiv111__terminateEPFvvE+0xa)[0x6c474ca]
+[aia314:11338] [ 5] /home/xinxin/scratch/Solver/src/maia(_ZN10__cxxabiv111__terminateEPFvvE+0xa)[0x6c474ca]
+[aia314:11328] [ 5] /home/xinxin/scratch/Solver/src/maia(_ZN10__cxxabiv111__terminateEPFvvE+0xa)[0x6c474ca]
+[aia314:11309] [ 5] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE12computeGammaIvLPv0EEEvv+0xbb)[0x168a59b]
+[aia316:54023] [ 9] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE12computeGammaIvLPv0EEEvv+0xbb)[0x168a59b]
+[aia316:54032] [ 9] /home/xinxin/scratch/Solver/src/maia(_ZN10__cxxabiv111__terminateEPFvvE+0xa)[0x6c474ca]
+[aia316:54038] [ 5] /home/xinxin/scratch/Solver/src/maia(__cxa_rethrow+0x4a)[0x6c476da]
+[aia316:54034] [ 7] /home/xinxin/scratch/Solver/src/maia(_ZN7Cantera11ThermoPhase11setState_TPEdd+0xa8)[0x6933268]
+[aia314:11307] [ 8] /home/xinxin/scratch/Solver/src/maia[0x6c47535]
+[aia314:11308] [ 6] /home/xinxin/scratch/Solver/src/maia[0x6c47535]
+[aia314:11310] [ 6] /home/xinxin/scratch/Solver/src/maia[0x6c47535]
+[aia316:54036] [ 6] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE18finalizeAdaptationEv+0x3fd)[0x172309d]
+[aia316:54032] [10] /home/xinxin/scratch/Solver/src/maia[0x6c47535]
+[aia314:11321] [ 6] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE18finalizeAdaptationEv+0x3fd)[0x172309d]
+[aia316:54023] [10] /home/xinxin/scratch/Solver/src/maia[0x6c47535]
+[aia314:11325] [ 6] /home/xinxin/scratch/Solver/src/maia[0x6c47535]
+[aia314:11328] [ 6] /home/xinxin/scratch/Solver/src/maia[0x6c47535]
+[aia314:11338] [ 6] /home/xinxin/scratch/Solver/src/maia[0x6c47535]
+[aia314:11309] [ 6] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE12computeGammaIvLPv0EEEvv+0xbb)[0x168a59b]
+[aia314:11307] [ 9] /home/xinxin/scratch/Solver/src/maia[0x6c47535]
+[aia316:54038] [ 6] /home/xinxin/scratch/Solver/src/maia(_ZN7Cantera11ThermoPhase11setState_TPEdd+0xa8)[0x6933268]
+[aia316:54034] [ 8] /home/xinxin/scratch/Solver/src/maia(__cxa_rethrow+0x4a)[0x6c476da]
+[aia316:54036] [ 7] /home/xinxin/scratch/Solver/src/maia(__cxa_rethrow+0x4a)[0x6c476da]
+[aia314:11310] [ 7] /home/xinxin/scratch/Solver/src/maia(__cxa_rethrow+0x4a)[0x6c476da]
+[aia314:11308] [ 7] /home/xinxin/scratch/Solver/src/maia(__cxa_rethrow+0x4a)[0x6c476da]
+[aia314:11321] [ 7] /home/xinxin/scratch/Solver/src/maia(__cxa_rethrow+0x4a)[0x6c476da]
+[aia314:11325] [ 7] /home/xinxin/scratch/Solver/src/maia(_ZN4maia4grid10ControllerILi2EE10adaptationEb+0x419c)[0x504766c]
+[aia316:54023] [11] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE18finalizeAdaptationEv+0x3fd)[0x172309d]
+[aia314:11307] [10] /home/xinxin/scratch/Solver/src/maia(__cxa_rethrow+0x4a)[0x6c476da]
+[aia314:11338] [ 7] /home/xinxin/scratch/Solver/src/maia(_ZN4maia4grid10ControllerILi2EE10adaptationEb+0x419c)[0x504766c]
+[aia316:54032] [11] /home/xinxin/scratch/Solver/src/maia(__cxa_rethrow+0x4a)[0x6c476da]
+[aia314:11328] [ 7] /home/xinxin/scratch/Solver/src/maia(__cxa_rethrow+0x4a)[0x6c476da]
+[aia314:11309] [ 7] /home/xinxin/scratch/Solver/src/maia(__cxa_rethrow+0x4a)[0x6c476da]
+[aia316:54038] [ 7] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE12computeGammaIvLPv0EEEvv+0xbb)[0x168a59b]
+[aia316:54034] [ 9] /home/xinxin/scratch/Solver/src/maia(_ZN7Cantera11ThermoPhase11setState_TPEdd+0xa8)[0x6933268]
+[aia316:54036] [ 8] /home/xinxin/scratch/Solver/src/maia(_ZN7Cantera11ThermoPhase11setState_TPEdd+0xa8)[0x6933268]
+[aia314:11310] [ 8] /home/xinxin/scratch/Solver/src/maia(_ZN7Cantera11ThermoPhase11setState_TPEdd+0xa8)[0x6933268]
+[aia314:11308] [ 8] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE18finalizeAdaptationEv+0x3fd)[0x172309d]
+[aia316:54034] [10] /home/xinxin/scratch/Solver/src/maia(_ZN7Cantera11ThermoPhase11setState_TPEdd+0xa8)[0x6933268]
+[aia314:11321] [ 8] /home/xinxin/scratch/Solver/src/maia(_ZN11Application3runILi2EEEvv+0x672a)[0x504f0da]
+[aia316:54023] [12] /home/xinxin/scratch/Solver/src/maia(_ZN7Cantera11ThermoPhase11setState_TPEdd+0xa8)[0x6933268]
+[aia314:11325] [ 8] /home/xinxin/scratch/Solver/src/maia(_ZN11Application3runILi2EEEvv+0x672a)[0x504f0da]
+[aia316:54032] [12] /home/xinxin/scratch/Solver/src/maia(_ZN7Cantera11ThermoPhase11setState_TPEdd+0xa8)[0x6933268]
+[aia314:11338] [ 8] /home/xinxin/scratch/Solver/src/maia(_ZN7Cantera11ThermoPhase11setState_TPEdd+0xa8)[0x6933268]
+[aia314:11328] [ 8] /home/xinxin/scratch/Solver/src/maia(_ZN7Cantera11ThermoPhase11setState_TPEdd+0xa8)[0x6933268]
+[aia316:54038] [ 8] /home/xinxin/scratch/Solver/src/maia(_ZN4maia4grid10ControllerILi2EE10adaptationEb+0x419c)[0x504766c]
+[aia314:11307] [11] /home/xinxin/scratch/Solver/src/maia(_ZN7Cantera11ThermoPhase11setState_TPEdd+0xa8)[0x6933268]
+[aia314:11309] [ 8] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE12computeGammaIvLPv0EEEvv+0xbb)[0x168a59b]
+[aia316:54036] [ 9] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE12computeGammaIvLPv0EEEvv+0xbb)[0x168a59b]
+[aia314:11308] [ 9] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE12computeGammaIvLPv0EEEvv+0xbb)[0x168a59b]
+[aia314:11310] [ 9] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE12computeGammaIvLPv0EEEvv+0xbb)[0x168a59b]
+[aia314:11321] [ 9] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE12computeGammaIvLPv0EEEvv+0xbb)[0x168a59b]
+[aia316:54038] [ 9] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE12computeGammaIvLPv0EEEvv+0xbb)[0x168a59b]
+[aia314:11338] [ 9] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE12computeGammaIvLPv0EEEvv+0xbb)[0x168a59b]
+[aia314:11325] [ 9] /home/xinxin/scratch/Solver/src/maia(_ZN11Environment3runEv+0x4f1)[0x60d7c51]
+[aia316:54023] [13] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE12computeGammaIvLPv0EEEvv+0xbb)[0x168a59b]
+[aia314:11309] [ 9] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE12computeGammaIvLPv0EEEvv+0xbb)[0x168a59b]
+[aia314:11328] [ 9] /home/xinxin/scratch/Solver/src/maia(_ZN11Environment3runEv+0x4f1)[0x60d7c51]
+[aia316:54032] [13] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE18finalizeAdaptationEv+0x3fd)[0x172309d]
+[aia316:54036] [10] /home/xinxin/scratch/Solver/src/maia(_ZN4maia4grid10ControllerILi2EE10adaptationEb+0x419c)[0x504766c]
+[aia316:54034] [11] /home/xinxin/scratch/Solver/src/maia(_ZN11Application3runILi2EEEvv+0x672a)[0x504f0da]
+[aia314:11307] [12] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE18finalizeAdaptationEv+0x3fd)[0x172309d]
+[aia314:11308] [10] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE18finalizeAdaptationEv+0x3fd)[0x172309d]
+[aia314:11310] [10] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE18finalizeAdaptationEv+0x3fd)[0x172309d]
+[aia316:54038] [10] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE18finalizeAdaptationEv+0x3fd)[0x172309d]
+[aia314:11321] [10] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE18finalizeAdaptationEv+0x3fd)[0x172309d]
+[aia314:11325] [10] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE18finalizeAdaptationEv+0x3fd)[0x172309d]
+[aia314:11338] [10] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE18finalizeAdaptationEv+0x3fd)[0x172309d]
+[aia314:11309] [10] /home/xinxin/scratch/Solver/src/maia(_ZN19FvCartesianSolverXDILi2E15FvSysEqnDetChemILi2EEE18finalizeAdaptationEv+0x3fd)[0x172309d]
+[aia314:11328] [10] /home/xinxin/scratch/Solver/src/maia(_ZN4MAIA3runEv+0x10e7)[0x65a1337]
+[aia316:54023] [14] /home/xinxin/scratch/Solver/src/maia(_ZN4MAIA3runEv+0x10e7)[0x65a1337]
+[aia316:54032] [14] /home/xinxin/scratch/Solver/src/maia(_ZN4maia4grid10ControllerILi2EE10adaptationEb+0x419c)[0x504766c]
+[aia316:54036] [11] /home/xinxin/scratch/Solver/src/maia(_ZN11Application3runILi2EEEvv+0x672a)[0x504f0da]
+[aia316:54034] [12] /home/xinxin/scratch/Solver/src/maia(_ZN11Environment3runEv+0x4f1)[0x60d7c51]
+[aia314:11307] [13] /home/xinxin/scratch/Solver/src/maia(_ZN4maia4grid10ControllerILi2EE10adaptationEb+0x419c)[0x504766c]
+[aia314:11308] [11] /home/xinxin/scratch/Solver/src/maia(_ZN4maia4grid10ControllerILi2EE10adaptationEb+0x419c)[0x504766c]
+[aia314:11310] [11] /home/xinxin/scratch/Solver/src/maia(_ZN4maia4grid10ControllerILi2EE10adaptationEb+0x419c)[0x504766c]
+[aia316:54038] [11] /home/xinxin/scratch/Solver/src/maia(main+0x6d)[0xaf9d3d]
+[aia316:54023] [15] /lib64/libc.so.6(__libc_start_main+0xea)[0x7f373a42934a]
+[aia316:54023] [16] /home/xinxin/scratch/Solver/src/maia(_ZN4maia4grid10ControllerILi2EE10adaptationEb+0x419c)[0x504766c]
+[aia314:11321] [11] /home/xinxin/scratch/Solver/src/maia(main+0x6d)[0xaf9d3d]
+[aia316:54032] [15] /lib64/libc.so.6(__libc_start_main+0xea)[0x7ff9946a234a]
+[aia316:54032] [16] /home/xinxin/scratch/Solver/src/maia(_ZN4maia4grid10ControllerILi2EE10adaptationEb+0x419c)[0x504766c]
+[aia314:11325] [11] /home/xinxin/scratch/Solver/src/maia(_ZN4maia4grid10ControllerILi2EE10adaptationEb+0x419c)[0x504766c]
+[aia314:11338] [11] /home/xinxin/scratch/Solver/src/maia(_ZN11Application3runILi2EEEvv+0x672a)[0x504f0da]
+[aia316:54036] [12] /home/xinxin/scratch/Solver/src/maia(_ZN4maia4grid10ControllerILi2EE10adaptationEb+0x419c)[0x504766c]
+[aia314:11309] [11] /home/xinxin/scratch/Solver/src/maia(_ZN4maia4grid10ControllerILi2EE10adaptationEb+0x419c)[0x504766c]
+[aia314:11328] [11] /home/xinxin/scratch/Solver/src/maia(_ZN11Environment3runEv+0x4f1)[0x60d7c51]
+[aia316:54034] [13] /home/xinxin/scratch/Solver/src/maia(_start+0x2a)[0xbe6d6a]
+[aia316:54032] *** End of error message ***
+/home/xinxin/scratch/Solver/src/maia(_start+0x2a)[0xbe6d6a]
+[aia316:54023] *** End of error message ***
+/home/xinxin/scratch/Solver/src/maia(_ZN11Application3runILi2EEEvv+0x672a)[0x504f0da]
+[aia316:54038] [12] /home/xinxin/scratch/Solver/src/maia(_ZN11Application3runILi2EEEvv+0x672a)[0x504f0da]
+[aia314:11308] [12] /home/xinxin/scratch/Solver/src/maia(_ZN11Application3runILi2EEEvv+0x672a)[0x504f0da]
+[aia314:11310] [12] /home/xinxin/scratch/Solver/src/maia(_ZN4MAIA3runEv+0x10e7)[0x65a1337]
+[aia314:11307] [14] /home/xinxin/scratch/Solver/src/maia(_ZN11Application3runILi2EEEvv+0x672a)[0x504f0da]
+[aia314:11321] [12] /home/xinxin/scratch/Solver/src/maia(_ZN11Environment3runEv+0x4f1)[0x60d7c51]
+[aia316:54036] [13] /home/xinxin/scratch/Solver/src/maia(_ZN11Application3runILi2EEEvv+0x672a)[0x504f0da]
+[aia314:11325] [12] /home/xinxin/scratch/Solver/src/maia(_ZN11Application3runILi2EEEvv+0x672a)[0x504f0da]
+[aia314:11338] [12] /home/xinxin/scratch/Solver/src/maia(_ZN11Application3runILi2EEEvv+0x672a)[0x504f0da]
+[aia314:11328] [12] /home/xinxin/scratch/Solver/src/maia(_ZN11Application3runILi2EEEvv+0x672a)[0x504f0da]
+[aia314:11309] [12] /home/xinxin/scratch/Solver/src/maia(_ZN4MAIA3runEv+0x10e7)[0x65a1337]
+[aia316:54034] [14] /home/xinxin/scratch/Solver/src/maia(main+0x6d)[0xaf9d3d]
+[aia314:11307] [15] /lib64/libc.so.6(__libc_start_main+0xea)[0x7f2a99e0234a]
+[aia314:11307] [16] /home/xinxin/scratch/Solver/src/maia(_ZN11Environment3runEv+0x4f1)[0x60d7c51]
+[aia316:54038] [13] /home/xinxin/scratch/Solver/src/maia(_ZN11Environment3runEv+0x4f1)[0x60d7c51]
+[aia314:11308] [13] /home/xinxin/scratch/Solver/src/maia(_ZN11Environment3runEv+0x4f1)[0x60d7c51]
+[aia314:11310] [13] /home/xinxin/scratch/Solver/src/maia(main+0x6d)[0xaf9d3d]
+[aia316:54034] [15] /lib64/libc.so.6(__libc_start_main+0xea)[0x7f004b5b534a]
+[aia316:54034] [16] /home/xinxin/scratch/Solver/src/maia(_ZN4MAIA3runEv+0x10e7)[0x65a1337]
+[aia316:54036] [14] /home/xinxin/scratch/Solver/src/maia(_ZN11Environment3runEv+0x4f1)[0x60d7c51]
+[aia314:11321] [13] /home/xinxin/scratch/Solver/src/maia(_start+0x2a)[0xbe6d6a]
+[aia314:11307] *** End of error message ***
+/home/xinxin/scratch/Solver/src/maia(_ZN11Environment3runEv+0x4f1)[0x60d7c51]
+[aia314:11325] [13] /home/xinxin/scratch/Solver/src/maia(_ZN11Environment3runEv+0x4f1)[0x60d7c51]
+[aia314:11338] [13] /home/xinxin/scratch/Solver/src/maia(_ZN11Environment3runEv+0x4f1)[0x60d7c51]
+[aia314:11328] [13] /home/xinxin/scratch/Solver/src/maia(_ZN11Environment3runEv+0x4f1)[0x60d7c51]
+[aia314:11309] [13] /home/xinxin/scratch/Solver/src/maia(_ZN4MAIA3runEv+0x10e7)[0x65a1337]
+[aia316:54038] [14] /home/xinxin/scratch/Solver/src/maia(main+0x6d)[0xaf9d3d]
+[aia316:54036] [15] /lib64/libc.so.6(__libc_start_main+0xea)[0x7f3c12edd34a]
+[aia316:54036] [16] /home/xinxin/scratch/Solver/src/maia(_start+0x2a)[0xbe6d6a]
+[aia316:54034] *** End of error message ***
+/home/xinxin/scratch/Solver/src/maia(_ZN4MAIA3runEv+0x10e7)[0x65a1337]
+[aia314:11308] [14] /home/xinxin/scratch/Solver/src/maia(_ZN4MAIA3runEv+0x10e7)[0x65a1337]
+[aia314:11310] [14] /home/xinxin/scratch/Solver/src/maia(main+0x6d)[0xaf9d3d]
+[aia316:54038] [15] /lib64/libc.so.6(__libc_start_main+0xea)[0x7f09e0bbe34a]
+[aia316:54038] [16] /home/xinxin/scratch/Solver/src/maia(_ZN4MAIA3runEv+0x10e7)[0x65a1337]
+[aia314:11321] [14] /home/xinxin/scratch/Solver/src/maia(_ZN4MAIA3runEv+0x10e7)[0x65a1337]
+[aia314:11325] [14] /home/xinxin/scratch/Solver/src/maia(_ZN4MAIA3runEv+0x10e7)[0x65a1337]
+[aia314:11338] [14] /home/xinxin/scratch/Solver/src/maia(_start+0x2a)[0xbe6d6a]
+[aia316:54036] *** End of error message ***
+/home/xinxin/scratch/Solver/src/maia(_ZN4MAIA3runEv+0x10e7)[0x65a1337]
+[aia314:11309] [14] /home/xinxin/scratch/Solver/src/maia(_ZN4MAIA3runEv+0x10e7)[0x65a1337]
+[aia314:11328] [14] /home/xinxin/scratch/Solver/src/maia(main+0x6d)[0xaf9d3d]
+[aia314:11308] [15] /lib64/libc.so.6(__libc_start_main+0xea)[0x7eff7635434a]
+[aia314:11308] [16] /home/xinxin/scratch/Solver/src/maia(main+0x6d)[0xaf9d3d]
+[aia314:11310] [15] /lib64/libc.so.6(__libc_start_main+0xea)[0x7f4d78e8934a]
+[aia314:11310] [16] /home/xinxin/scratch/Solver/src/maia(_start+0x2a)[0xbe6d6a]
+[aia316:54038] *** End of error message ***
+/home/xinxin/scratch/Solver/src/maia(main+0x6d)[0xaf9d3d]
+[aia314:11321] [15] /lib64/libc.so.6(__libc_start_main+0xea)[0x7f228eaf334a]
+[aia314:11321] [16] /home/xinxin/scratch/Solver/src/maia(main+0x6d)[0xaf9d3d]
+[aia314:11325] [15] /lib64/libc.so.6(__libc_start_main+0xea)[0x7ff6c972534a]
+[aia314:11325] [16] /home/xinxin/scratch/Solver/src/maia(main+0x6d)[0xaf9d3d]
+[aia314:11338] [15] /lib64/libc.so.6(__libc_start_main+0xea)[0x7fe19d8e234a]
+[aia314:11338] [16] /home/xinxin/scratch/Solver/src/maia(main+0x6d)[0xaf9d3d]
+[aia314:11309] [15] /lib64/libc.so.6(__libc_start_main+0xea)[0x7f60ec9fc34a]
+[aia314:11309] [16] /home/xinxin/scratch/Solver/src/maia(main+0x6d)[0xaf9d3d]
+[aia314:11328] [15] /lib64/libc.so.6(__libc_start_main+0xea)[0x7f5499b2334a]
+[aia314:11328] [16] /home/xinxin/scratch/Solver/src/maia(_start+0x2a)[0xbe6d6a]
+[aia314:11308] *** End of error message ***
+/home/xinxin/scratch/Solver/src/maia(_start+0x2a)[0xbe6d6a]
+[aia314:11310] *** End of error message ***
+/home/xinxin/scratch/Solver/src/maia(_start+0x2a)[0xbe6d6a]
+[aia314:11321] *** End of error message ***
+/home/xinxin/scratch/Solver/src/maia(_start+0x2a)[0xbe6d6a]
+[aia314:11325] *** End of error message ***
+/home/xinxin/scratch/Solver/src/maia(_start+0x2a)[0xbe6d6a]
+[aia314:11338] *** End of error message ***
+/home/xinxin/scratch/Solver/src/maia(_start+0x2a)[0xbe6d6a]
+[aia314:11309] *** End of error message ***
+/home/xinxin/scratch/Solver/src/maia(_start+0x2a)[0xbe6d6a]
+[aia314:11328] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 48 with PID 0 on node aia316 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------

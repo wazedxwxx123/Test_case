@@ -31,8 +31,8 @@
 "body_segments.boundary" = [0,1,2,3]
 "body_segments.ramp" = [4]
 
- BC.0 = 1048     # supersonic inflow  BNDRY CONDITION FOR SEGMENT 0
+ BC.0 = 1049     # supersonic inflow  BNDRY CONDITION FOR SEGMENT 0
  BC.1 = 3002  # adiabatic fixed wall conditions   BNDRY CONDITION FOR SEGMENT 1
- BC.2 = 3002  # adiabatic fixed wall conditions   BNDRY CONDITION FOR SEGMENT 2
+ BC.2 = 1048  # adiabatic fixed wall conditions   BNDRY CONDITION FOR SEGMENT 2
  BC.3 = 3002  # adiabatic fixed wall conditions   BNDRY CONDITION FOR SEGMENT 3
  BC.4 = 3003  # solid wall                        BNDRY CONDITION FOR SEGMENT 4

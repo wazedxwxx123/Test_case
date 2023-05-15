@@ -1,0 +1,34 @@
+#//////////////////////////////////////////////////////////////////////////////
+# MAIA DRIVER OPTIONS:
+gridGenerator = true
+flowSolver = false       # AND SOLVERS
+
+#//////////////////////////////////////////////////////////////////////
+# PHYSICS:
+nDim = 2  # 2D PROBLEM
+
+#//////////////////////////////////////////////////////////////////////
+# INPUT/OUTPUT:
+outputDir = "./out/"               # ROOT DIR OF OUTPUT FILES
+gridOutputFileName = "grid.Netcdf"        # GRID INPUT FILE FOR SOLVER
+geometryInputFileName = "geometry.toml" # GEOMETRY BINARY FILE
+
+#//////////////////////////////////////////////////////////////////////
+# GRID GENERATION:
+minLevel = 7  # MIN REFINEMENT LEVEL (CELLS ABOVE THIS LEVEL DELETED)
+maxRfnmntLvl = 13             # MAX ALLOWED REFINEMENT LEVEL
+maxUniformRefinementLevel = 7 # INITIAL REFINEMENT LEVEL
+maxBoundaryRfnLvl = 10 # REFINEMENT LEVEL AT BNDRY CND
+#localRfnMethod           = 1
+#localRfnLvlMethods = "RB-RB-R"
+#localMinBoundaryThreshold = 32
+#localRfnBoundaryIds = [4]
+#maxBoundaryRfnLvl = 12       # REFINEMENT LEVEL AT BNDRY CND
+
+
+#//////////////////////////////////////////////////////////////////////
+# MEMORY ALLOCATION:
+maxNoCells = 19800000     # MAX #OF CELLS ( ~9 * (2^{D})^{Level} )
+scratchSize = 5
+#//////////////////////////////////////////////////////////////////////
+noDomains = 1        # #of MPI Process (not necessary for Massive Parallel)

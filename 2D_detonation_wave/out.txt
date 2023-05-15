@@ -1,0 +1,254 @@
+      _____ ______    ________   ___   ________                             
+ ____|\   _ \  _   \ |\   __  \ |\  \ |\   __  \ ___                   
+  ___\ \  \\\__\ \  \\ \  \|\  \\ \  \\ \  \|\  \ ___    
+   ___\ \  \\|__| \  \\ \   __  \\ \  \\ \   __  \ ___         
+    ___\ \  \    \ \  \\ \  \ \  \\ \  \\ \  \ \  \ ___    
+     ___\ \__\    \ \__\\ \__\ \__\\ \__\\ \__\ \__\ ___    
+      ___\|__|     \|__| \|__|\|__| \|__| \|__|\|__| ____               
+
+Start time:            2023-05-12 15:32:24
+Number of ranks:       20
+Number of OMP threads: 24
+Host (of rank 0):      aia311
+Working directory:     /aia/r024/scratch/xinxin/Test_case/2D_detonation_wave
+User:                  xinxin
+Executable:            maia
+Command line args:     maia properties_run.toml
+
+Starting a full detailed chemistry simulation.
+Allocation of detailed chemistry primary values done.
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    failure. 
+Take 10 timesteps     1.898e-05      2.513
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [11] point grid(s).
+
+..............................................................................
+grid refinement disabled.
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    failure. 
+Take 10 timesteps     0.0001709      6.168
+Attempt Newton solution of steady-state problem...    failure. 
+Take 10 timesteps     0.0006487      4.914
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [11] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 2 3 4 5 6 
+    to resolve AR H H2 H2O H2O2 HO2 O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [16] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 4 5 6 7 8 9 
+    to resolve AR H H2 H2O H2O2 HO2 O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    failure. 
+Take 10 timesteps     0.0001709      5.109
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [22] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 7 8 9 10 11 12 13 
+    to resolve AR H H2 H2O H2O2 HO2 O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [29] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 10 11 12 13 14 15 16 17 
+    to resolve AR H H2 H2O H2O2 HO2 O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [37] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 13 14 15 16 17 18 19 20 21 22 
+    to resolve AR H2O2 HO2 O OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [47] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 19 20 21 22 23 
+    to resolve H2O2 HO2 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [52] point grid(s).
+
+..............................................................................
+no new points needed in domain 1
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [52] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 
+    to resolve AR H H2 H2O H2O2 HO2 O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [79] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 20 21 28 29 30 31 32 53 54 55 56 60 61 62 63 64 65 66 
+    to resolve AR H H2 H2O HO2 O O2 OH 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [97] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 44 45 
+    to resolve H2O2 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [99] point grid(s).
+
+..............................................................................
+no new points needed in domain 1
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [99] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 95 
+    to resolve AR H H2 H2O H2O2 HO2 O O2 OH T velocity 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [177] point grid(s).
+
+..............................................................................
+##############################################################################
+Refining grid in domain 1.
+    New points inserted after grid points 62 63 64 65 66 67 68 69 70 79 80 81 82 83 84 85 86 87 88 95 96 97 98 99 100 101 102 103 104 105 106 107 122 123 124 125 126 127 134 135 136 137 138 156 157 158 159 164 165 
+    to resolve AR H2O2 HO2 O O2 OH 
+##############################################################################
+
+..............................................................................
+Attempt Newton solution of steady-state problem...    success.
+
+Problem solved on [226] point grid(s).
+
+..............................................................................
+no new points needed in domain 1
+15 variables found in PMF file
+800 data lines found in PMF file
+15 variables found in PMF file
+800 data lines found in PMF file
+15 variables found in PMF file
+800 data lines found in PMF file
+15 variables found in PMF file
+800 data lines found in PMF file
+15 variables found in PMF file
+800 data lines found in PMF file
+15 variables found in PMF file
+15 variables found in PMF file
+15 variables found in PMF file
+800 data lines found in PMF file
+800 data lines found in PMF file
+800 data lines found in PMF file
+15 variables found in PMF file
+800 data lines found in PMF file
+15 variables found in PMF file
+800 data lines found in PMF file
+15 variables found in PMF file
+800 data lines found in PMF file
+15 variables found in PMF file
+15 variables found in PMF file
+15 variables found in PMF file
+800 data lines found in PMF file
+800 data lines found in PMF file
+15 variables found in PMF file
+800 data lines found in PMF file
+15 variables found in PMF file
+15 variables found in PMF file
+800 data lines found in PMF file
+800 data lines found in PMF file
+800 data lines found in PMF file
+15 variables found in PMF file
+800 data lines found in PMF file
+15 variables found in PMF file
+800 data lines found in PMF file
+15 variables found in PMF file
+800 data lines found in PMF file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+Compelte Read initial flame file
+--------------------------------------------------------------------------
+mpirun noticed that process rank 19 with PID 39105 on node aia311 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------

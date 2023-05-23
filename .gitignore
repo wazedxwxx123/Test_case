@@ -80,3 +80,7 @@ forceCoef
 *.jpg
 
 *.jpeg
+
+*.vtk
+
+*.sh

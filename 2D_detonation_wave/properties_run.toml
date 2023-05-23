@@ -7,7 +7,7 @@ outputInitialCondition = true
 #//////////////////////////////////////////////////////////////////////
 # PHYSICS:
 nDim = 2  # 2D PROBLEM
-timeSteps = 20      # #OF TIMESTEPS
+timeSteps = 20000      # #OF TIMESTEPS
 Re = 80              # REYNOLDS NUMBER
 Ma = 0.2             # MACH NUMBER
 gamma = 1.4          # RATIO OF SPECIFIC HEATS
@@ -60,25 +60,32 @@ forceLoadBalancing = true
 
 #=========== ADAPTATION ===================
 maxRfnmntLvl = 11            # MAX ALLOWED REFINEMENT LEVEL
-adaptation = false
-adaptationInterval = 2
-sensorWeight = [-1.0, 0.25, 0.25]
-sensorType = ["PATCH","DERIVATIVE","DERIVATIVE"]
+adaptation = true
+adaptationInterval = 5
+sensorWeight = [-1.0, -1.0, 0.80]
+sensorType = ["PATCH","SMOOTH","DERIVATIVE"]
 #sensorType = ["INTERFACE","DERIVATIVE"]
-localRfnLvlMethods = "RB-RB-R"
-localRfnLevelProperties = [0.012, 0.00, 0.00775,
-                           -0.10,  -0.10, 0.0046, 0.0002,
-                           0.012, 0.00, 0.00765,
-                           -0.10,  -0.10, 0.0046, 0.0001,
-                           0.012, 0.00, 0.00755]
+#localRfnLvlMethods = "RB-RB-R"
+localRfnLvlMethods = "BB-BB-BB"
+localRfnLevelProperties = [-0.01, -0.01, 0.09, 0.0007,
+                           -0.01, 0.0293, 0.09, 0.04,
+                           -0.01, -0.01, 0.09, 0.0007,
+                           -0.01, 0.0293, 0.09, 0.04,
+                           -0.01, -0.01, 0.09, 0.0007,
+                           -0.01, 0.0293, 0.09, 0.04]
 
-sensorDerivativeVariables = [3,9]
-#allowInterfaceRefinement = true
+#localRfnLevelProperties = [0.012, 0.00, 0.00775,
+#                           -0.10,  -0.10, 0.0046, 0.0002,
+#                           0.012, 0.00, 0.00765,
+#                           -0.10,  -0.10, 0.0046, 0.0001,
+#                           0.012, 0.00, 0.00755]
+sensorDerivativeVariables = [3]
+allowInterfaceRefinement = true
 initialAdaptation = true
 adaptationStart = 0
 #imbBandWidth = [10, 10]
-#smoothingLayers = 5
-#addedAdaptationSteps = 2
+smoothingLayers = 5
+addedAdaptationSteps = 2
 #checkRefinementHoles = true
 #=========== DETAILED CHEMISTRY  ONE DIMENSIONAL SOLVER ===================
 gridRatio = 5.0
@@ -126,7 +133,7 @@ noSolvers = 1
 noDomains = 12        # #of MPI Process (not necessary for Massive Parallel)
 restartFile = false #true
 restartTimeStep = 0
-restartInterval = 200
+restartInterval = 800
 useNonSpecifiedRestartFile = false #false #true
 timeStepMethod = 1
 noHaloLayers = 2

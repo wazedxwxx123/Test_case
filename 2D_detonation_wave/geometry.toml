@@ -24,5 +24,5 @@
 
  BC.0 = 1048     # supersonic inflow  BNDRY CONDITION FOR SEGMENT 0
  BC.1 = 3002  # adiabatic fixed wall conditions   BNDRY CONDITION FOR SEGMENT 1
- BC.2 = 1048  # adiabatic fixed wall conditions   BNDRY CONDITION FOR SEGMENT 2
+ BC.2 = 1049  # adiabatic fixed wall conditions   BNDRY CONDITION FOR SEGMENT 2
  BC.3 = 3002  # adiabatic fixed wall conditions   BNDRY CONDITION FOR SEGMENT 3

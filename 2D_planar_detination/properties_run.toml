@@ -38,7 +38,7 @@ noSpecies = 9
 viscousFluxScheme = "FIVE_POINT"
 
 infTemperature = 298.0
-infVelocity = 0.0  #
+infVelocity = -1955.0  #
 infPressure = 10000
 majorSpecies = "AR"
 infSpeciesName = ["H2", "O2", "AR"]
@@ -48,7 +48,7 @@ pocketTemperature = 3086.0
 pocketPressure = 26690
 pocketLocationleft = 0.003
 pocketLocationright = 0.016
-pocketLocationlow = 0.00
+pocketLocationlow = 0.02
 pocketLocationup = 0.01
 
 #//////////////////////////////////////////////////////////////////////////////
@@ -130,7 +130,7 @@ solutionInterval = 100000            # OUTPUT INTERVAL IN TIMESTEPS
 residualInterval = 1               # RESIDUAL INTERVAL
 dragOutputInterval = 100000             # FORCE COEFFICIENTS
 
-Iniflamefile = "h2Ar_znd.dat"
+Iniflamefile = "h2Ar_1955_znd.dat"
 createSpongeBoundary = false
 #//////////////////////////////////////////////////////////////////////
 # BOUNDARY CONDITIONS:

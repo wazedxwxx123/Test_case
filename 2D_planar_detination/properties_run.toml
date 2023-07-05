@@ -38,25 +38,25 @@ noSpecies = 9
 viscousFluxScheme = "FIVE_POINT"
 
 infTemperature = 298.0
-infVelocity = -1627  #
-infPressure = 6670
+infVelocity = 0.0  #
+infPressure = 10000
 majorSpecies = "AR"
 infSpeciesName = ["H2", "O2", "AR"]
-infSpeciesMassFraction = [0.0127726 , 0.101369, 0.885858 ]
+infSpeciesMassFraction = [0.0347796 , 0.276011, 0.689209 ]
 
-pocketTemperature = 2086.0
-pocketPressure = 46690
-pocketLocationleft = 0.033
-pocketLocationright = 0.043
-pocketLocationlow = 0.0
-pocketLocationup = 0.0070
+pocketTemperature = 3086.0
+pocketPressure = 26690
+pocketLocationleft = 0.003
+pocketLocationright = 0.016
+pocketLocationlow = 0.00
+pocketLocationup = 0.01
 
 #//////////////////////////////////////////////////////////////////////////////
 # LOAD BALANCING
 
 balance = true # activate load balancing
 loadBalancingMode = 1 # use weighting mode
-loadBalancingInterval = 100
+loadBalancingInterval = 1000
 #balanceAfterAdaptation = false
 #dlbUpdatePartitionCells = true
 dlbPartitionMethod = "DLB_PARTITION_WEIGHT"
@@ -65,7 +65,7 @@ dlbPartitionMethod = "DLB_PARTITION_WEIGHT"
 
 #=========== ADAPTATION ===================
 maxRfnmntLvl = 10            # MAX ALLOWED REFINEMENT LEVEL
-adaptation = true
+adaptation = false
 adaptationInterval = 10
 #sensorWeight = [-1.0, -1.0, 0.50]
 #sensorType = ["PATCH","SMOOTH","DERIVATIVE"]
@@ -130,7 +130,7 @@ solutionInterval = 100000            # OUTPUT INTERVAL IN TIMESTEPS
 residualInterval = 1               # RESIDUAL INTERVAL
 dragOutputInterval = 100000             # FORCE COEFFICIENTS
 
-Iniflamefile = "Znd_product_wb.dat"
+Iniflamefile = "h2Ar_znd.dat"
 createSpongeBoundary = false
 #//////////////////////////////////////////////////////////////////////
 # BOUNDARY CONDITIONS:
@@ -149,8 +149,8 @@ noSolvers = 1
 noDomains = 12        # #of MPI Process (not necessary for Massive Parallel)
 restartFile = false #true
 restartTimeStep = 0
-restartInterval = 100000
-outputsFixedGap = true
+restartInterval = 100
+outputsFixedGap = false
 totalPhysicaltime = 0.0001
 outputsNum = 2
 useNonSpecifiedRestartFile = false #false #true

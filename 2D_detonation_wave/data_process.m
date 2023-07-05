@@ -1,3 +1,2 @@
-ZNDzone.N2 = 0.0 * ZNDzone.N2;
-ZNDzone.x = 0.01 * ZNDzone.x;
-writetable(ZNDzone, 'Znd_product.dat', 'Delimiter', ' ');
+
+writetable(Zndproducto2h2, 'Znd_product_wb.dat', 'Delimiter', ' ');

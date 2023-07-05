@@ -17,7 +17,7 @@ geometryInputFileName = "geometry.toml" # GEOMETRY BINARY FILE
 # GRID GENERATION:
 minLevel = 7  # MIN REFINEMENT LEVEL (CELLS ABOVE THIS LEVEL DELETED)
 maxRfnmntLvl = 13             # MAX ALLOWED REFINEMENT LEVEL
-maxUniformRefinementLevel = 8 # INITIAL REFINEMENT LEVEL
+maxUniformRefinementLevel = 9 # INITIAL REFINEMENT LEVEL
 maxBoundaryRfnLvl = 11  # REFINEMENT LEVEL AT BNDRY CND
 localRfnMethod           = 0
 localRfnLvlMethods = "BBB-BBB-BBB"

@@ -1,0 +1,165 @@
+#//////////////////////////////////////////////////////////////////////////////
+# MAIA DRIVER OPTIONS:
+gridGenerator = false    # ACTIVATE GRID GENERATOR
+flowSolver = true       # AND SOLVERS
+outputInitialCondition = true
+
+#//////////////////////////////////////////////////////////////////////
+# PHYSICS:
+nDim = 2  # 2D PROBLEM
+timeSteps = 100000      # #OF TIMESTEPS
+Re = 80              # REYNOLDS NUMBER
+Ma = 0.2             # MACH NUMBER
+gamma = 1.4          # RATIO OF SPECIFIC HEATS
+initialCondition = 147522 # INITIAL CONDITION
+
+#//////////////////////////////////////////////////////////////////////
+# NUMERICS:
+executionRecipe = "RECIPE_BASE"
+solvertype.default= "MAIA_UNIFIED"
+solvertype.0 = "MAIA_FINITE_VOLUME" # SOLVER TYPE: FINITE VOLUME
+#upwindCoefficient = 1           # CHI (UPWIND OF PRESSURE SPLITTING)
+solverMethod = "MAIA_RUNGE_KUTTA" # TIME INTEGRATION METHOD: RUNGE KUTTA
+cfl = 0.15                       # COURANT NUMBER
+cellMerging = false                 # FLUX-REDISTRIBUTION ENABLED
+timeStepComputationInterval = 1
+surfaceValueReconstruction = "HOCD_LIMITED_SLOPES"
+limitedSlopesVar =[1,1,1]
+fvSystemEquations = "FV_SYSEQN_DETCHEM"
+haloMode = 2
+#=========== DETAILED CHEMISTRY  ==========================================
+isDetChem = true
+hasChemicalReaction = true
+reactionMechanism = "/home/xinxin/scratch/New_mechanism/WestBrook/westbrook.yaml"
+phaseName = "wbmech"
+transportModel = "Multi"
+
+noSpecies = 9
+viscousFluxScheme = "FIVE_POINT"
+
+infTemperature = 298.0
+infVelocity = 0.0  #
+infPressure = 10000
+majorSpecies = "AR"
+infSpeciesName = ["H2", "O2", "AR"]
+infSpeciesMassFraction = [0.0347796 , 0.276011, 0.689209 ]
+
+pocketTemperature = 3086.0
+pocketPressure = 26690
+pocketLocationleft = 0.003
+pocketLocationright = 0.016
+pocketLocationlow = 0.02
+pocketLocationup = 0.01
+
+#//////////////////////////////////////////////////////////////////////////////
+# LOAD BALANCING
+
+balance = true # activate load balancing
+loadBalancingMode = 1 # use weighting mode
+loadBalancingInterval = 1000
+#balanceAfterAdaptation = false
+#dlbUpdatePartitionCells = true
+dlbPartitionMethod = "DLB_PARTITION_WEIGHT"
+#loadBalancingStopTimeStep = 5000
+#forceLoadBalancing = false
+
+#=========== ADAPTATION ===================
+maxRfnmntLvl = 10            # MAX ALLOWED REFINEMENT LEVEL
+adaptation = false
+adaptationInterval = 10
+#sensorWeight = [-1.0, -1.0, 0.50]
+#sensorType = ["PATCH","SMOOTH","DERIVATIVE"]
+#sensorType = ["INTERFACE","DERIVATIVE"]
+#localRfnLvlMethods = "RB-RB-R"
+#sensorWeight = [-1.0, 0.5]
+#sensorType =  ["PATCH","DERIVATIVE"]
+sensorType = ["DERIVATIVE","DERIVATIVE","DERIVATIVE","DERIVATIVE"]
+sensorWeight = [0.7,0.7,0.7,0.7]
+localRfnLvlMethods = "B-B"
+localRfnLevelProperties =[0.0435, 0.00, 0.0465, 0.08,
+			0.044, 0.00, 0.046, 0.08]
+#localRfnLvlMethods = "B-B-B"
+#localRfnLevelProperties =[0.042, 0.00, 0.048, 0.08,
+#              		  0.043, 0.00, 0.047, 0.08,
+#			  0.044, 0.00, 0.046, 0.08]
+#localRfnLvlMethods = "BB-BB-BB"
+#localRfnLevelProperties = [-0.01, -0.01, 0.09, 0.001,
+#                           -0.01, 0.0290, 0.09, 0.04,
+#                           -0.01, -0.01, 0.09, 0.001,
+#                           -0.01, 0.0290, 0.09, 0.04,
+#                           -0.01, -0.01, 0.09, 0.001,
+#                           -0.01, 0.0290, 0.09, 0.04]
+#localRfnLevelProperties = [0.012, 0.00, 0.00775,
+#                           -0.10,  -0.10, 0.0046, 0.0002,
+#                           0.012, 0.00, 0.00765,
+#                           -0.10,  -0.10, 0.0046, 0.0001,
+#                           0.012, 0.00, 0.00755]
+sensorDerivativeVariables = [25,2,3,23]
+allowInterfaceRefinement = true
+initialAdaptation = true
+adaptationStart = 0
+#imbBandWidth = [10, 10]
+#smoothingLayers = 5
+#addedAdaptationSteps = 4
+checkRefinementHoles = true
+diagSmoothing = true
+#=========== DETAILED CHEMISTRY  ONE DIMENSIONAL SOLVER ===================
+gridRatio = 5.0
+gridSlope = 0.5 # 0.4
+gridCurve = 0.3 # 0.3
+gridPrune = -0.00005
+domainLength = 0.03
+noGridPoints = 10
+equivalenceRatio = 0.6
+oneDRelError = 0.01
+
+#============ SOLVER TYPE ==============================================
+noRKSteps = 5
+rkalpha-step = [0.25, 0.16666666666, 0.375, 0.5, 1.0]
+rungeKuttaOrder = 2
+globalUpwindCoefficient = 0.05
+upwindCoefficient = 0.0
+
+#//////////////////////////////////////////////////////////////////////
+# INPUT/OUTPUT:
+outputDir = "./out/"               # ROOT DIR OF OUTPUT FILES
+solutionOutput = "./out/"          # ROOT DIR FOR SOLUTION OUTPUT
+gridInputFileName = "grid.Netcdf"         # GRID GENERATOR OUTPUT FILE
+geometryInputFileName = "geometry.toml" # GEOMETRY BINARY FILE
+solutionInterval = 100000            # OUTPUT INTERVAL IN TIMESTEPS
+residualInterval = 1               # RESIDUAL INTERVAL
+dragOutputInterval = 100000             # FORCE COEFFICIENTS
+
+Iniflamefile = "H2AR2_1955_ZND.dat"
+createSpongeBoundary = false
+#//////////////////////////////////////////////////////////////////////
+# BOUNDARY CONDITIONS:
+maxNoBndryCndIds = 4     # MAX #OF BOUNDARY CONDITIONS
+
+#//////////////////////////////////////////////////////////////////////
+
+#//////////////////////////////////////////////////////////////////////
+# MEMORY ALLOCATION:
+maxNoCells = 170000 #7380     # MAX #OF CELLS ( ~9 * (2^{D})^{Level} )
+maxNoBndryCells = 200000 #4120 # MAX #OF BOUNDARY CELLS
+maxNoSurfaces = 388000  # MAX #OF SURFACES ( ~3 * maxNoCells )
+scratchSize = 55
+#//////////////////////////////////////////////////////////////////////
+noSolvers = 1
+noDomains = 12        # #of MPI Process (not necessary for Massive Parallel)
+restartFile = false #true
+restartTimeStep = 0
+restartInterval = 100
+outputsFixedGap = false
+totalPhysicaltime = 0.0001
+outputsNum = 2
+useNonSpecifiedRestartFile = false #false #true
+timeStepMethod = 1
+noHaloLayers = 2
+writeOutData = 0
+
+#sensorBandRefinement = true
+#sensorBandAdditionalLayers = 80
+
+detChemExtendedOutput = true
+#//////////////////////////////////////////////////////////////////////////////

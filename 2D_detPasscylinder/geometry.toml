@@ -1,0 +1,28 @@
+#//////////////////////////////////////////////////////////////////////////////
+
+ noSegments = 4  # FIVE SEGMENTS: 
+
+ filename.default   = ""   # ROOT SEGMENT NAMES IF ASSIGNED OTHERWISE USE BLANK (opt. use stl/)
+ BC.default         = 0    # INITIALISATION OF BC
+
+ filename.0 = "stl/left.stl"
+ filename.1 = "stl/upper.stl"
+ filename.2 = "stl/right.stl"
+ filename.3 = "stl/lower.stl"
+
+#                       1 (SlipWall)
+#             __________________________________
+#             |                                 |
+#             |                                 |
+#(INFLOW) 0   |                                 |
+#             |                                 |2 (OUTFLOW)
+#             |                                 |
+#             |                                 |
+#             |_________________________________|
+#             3 (SlipWall)
+"body_segments.boundary" = [0,1,2,3]
+
+ BC.0 = 1048  # supersonic inflow  BNDRY CONDITION FOR SEGMENT 0
+ BC.1 = 3002  # adiabatic fixed wall conditions   BNDRY CONDITION FOR SEGMENT 1
+ BC.2 = 1049  # adiabatic fixed wall conditions   BNDRY CONDITION FOR SEGMENT 2
+ BC.3 = 3002  # adiabatic fixed wall conditions   BNDRY CONDITION FOR SEGMENT 3

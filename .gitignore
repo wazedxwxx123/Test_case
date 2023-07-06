@@ -84,3 +84,5 @@ forceCoef
 *.vtk
 
 *.sh
+
+BIG_DATA_*
